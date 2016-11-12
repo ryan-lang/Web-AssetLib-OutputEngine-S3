@@ -42,6 +42,10 @@
       },
       "runtime" : {
          "requires" : {
+            "Kavorka" : "0",
+            "Moo" : "0",
+            "Paws" : "0",
+            "Web::AssetLib" : "0",
             "perl" : "5.018004"
          }
       },
