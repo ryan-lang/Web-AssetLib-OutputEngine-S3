@@ -9031,10 +9031,10 @@ DISTRIBUTIONS
       Fcntl 0
       URI 1.10
       perl 5.008001
-  Web-AssetLib-0.0.1005
-    pathname: D/DU/DUMMY/Web-AssetLib-0.0.1005.tar.gz
+  Web-AssetLib-0.0.1006
+    pathname: D/DU/DUMMY/Web-AssetLib-0.0.1006.tar.gz
     provides:
-      Web::AssetLib v0.0.1005
+      Web::AssetLib v0.0.1006
       Web::AssetLib::Asset undef
       Web::AssetLib::Bundle undef
       Web::AssetLib::InputEngine undef
@@ -9044,8 +9044,12 @@ DISTRIBUTIONS
       Web::AssetLib::Library undef
       Web::AssetLib::MinifierEngine undef
       Web::AssetLib::MinifierEngine::Standard undef
+      Web::AssetLib::Output undef
+      Web::AssetLib::Output::Content undef
+      Web::AssetLib::Output::Link undef
       Web::AssetLib::OutputEngine undef
       Web::AssetLib::OutputEngine::LocalFile undef
+      Web::AssetLib::OutputEngine::String undef
       Web::AssetLib::Role::Logger undef
       Web::AssetLib::Util undef
     requirements:
@@ -9054,10 +9058,12 @@ DISTRIBUTIONS
       Log::Log4perl 0
       Method::Signatures 0
       Module::Build::Tiny 0.035
+      Moo 0
       Moose 0
       MooseX::Aliases 0
       MooseX::Log::Log4perl 0
       Path::Tiny 0
+      Types::Standard 0
   XML-NamespaceSupport-1.11
     pathname: P/PE/PERIGRIN/XML-NamespaceSupport-1.11.tar.gz
     provides:

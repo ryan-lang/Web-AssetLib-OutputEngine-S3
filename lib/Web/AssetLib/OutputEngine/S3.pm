@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: S3 output engine for Web::AssetLib
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use strict;
 use warnings;
@@ -11,6 +11,7 @@ use Carp;
 use Paws;
 use Paws::Credential::Environment;
 use Types::Standard qw/Str InstanceOf HashRef/;
+use Web::AssetLib::Output::Link;
 
 extends 'Web::AssetLib::OutputEngine';
 
@@ -66,15 +67,19 @@ has '_s3_obj_cache' => (
 );
 
 method export (:$assets!, :$minifier?) {
-    my $types        = {};
-    my $output_types = {};
+    my $types  = {};
+    my $output = [];
 
     # categorize into type groups, and seperate concatenated
     # assets from those that stand alone
 
     foreach my $asset ( sort { $a->rank <=> $b->rank } @$assets ) {
         if ( $asset->isPassthru ) {
-            push @{ $$output_types{ $asset->type } }, $asset->link_path;
+            push @$output,
+                Web::AssetLib::Output::Link->new(
+                src  => $asset->link_path,
+                type => $asset->type
+                );
         }
         else {
             for ( $asset->type ) {
@@ -126,15 +131,18 @@ method export (:$assets!, :$minifier?) {
                 $cacheInvalid = 1;
             }
 
-            push @{ $$output_types{$type} },
-                sprintf( '%s/%s', $self->link_url, $filename );
+            push @$output,
+                Web::AssetLib::Output::Link->new(
+                src  => sprintf( '%s/%s', $self->link_url, $filename ),
+                type => $type
+                );
         }
     }
 
     $self->_invalidate_s3_obj_cache()
         if $cacheInvalid;
 
-    return $output_types;
+    return $output;
 }
 
 method _build__s3_obj_cache (@_) {
