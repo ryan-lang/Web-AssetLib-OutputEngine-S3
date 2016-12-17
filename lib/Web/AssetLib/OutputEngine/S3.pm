@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: S3 output engine for Web::AssetLib
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use strict;
 use warnings;
@@ -60,10 +60,10 @@ has 's3' => (
 );
 
 has '_s3_obj_cache' => (
-    is         => 'rw',
-    isa        => HashRef,
-    clearer    => '_invalidate_s3_obj_cache',
-    lazy_build => 1
+    is      => 'lazy',
+    isa     => HashRef,
+    clearer => '_invalidate_s3_obj_cache',
+    builder => '_build__s3_obj_cache'
 );
 
 method export (:$assets!, :$minifier?) {
@@ -151,7 +151,7 @@ method _build__s3_obj_cache (@_) {
 
     $self->log->dump( 's3 object cache: ', $cache, 'debug' );
 
-    return $cache;
+    return $cache || {};
 }
 
 # before '_export' => sub {
