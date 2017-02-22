@@ -8,9 +8,10 @@ use warnings;
 use Kavorka;
 use Moo;
 use Carp;
+use DateTime;
 use Paws;
 use Paws::Credential::Environment;
-use Types::Standard qw/Str InstanceOf HashRef/;
+use Types::Standard qw/Str InstanceOf HashRef Maybe CodeRef/;
 use Web::AssetLib::Output::Link;
 
 extends 'Web::AssetLib::OutputEngine';
@@ -34,6 +35,20 @@ has 'region' => (
     is       => 'rw',
     isa      => Str,
     required => 1
+);
+
+# undef means no expiration tag is set
+# callback recieves a hashref of put arguments
+# and should return DateTime object
+has 'object_expiration_cb' => (
+    is      => 'rw',
+    isa     => Maybe [CodeRef],
+    default => sub {
+        sub {
+            my $args = shift;
+            return DateTime->now( time_zone => 'local' )->add( years => 1 );
+        };
+    }
 );
 
 has 'link_url' => (
@@ -120,13 +135,20 @@ method export (:$assets!, :$minifier?) {
                     );
                 }
 
-                my $put = $self->s3->PutObject(
+                my %putargs = (
                     Bucket => $self->bucket_name,
                     Key    => $filename,
                     Body   => $output_contents,
                     ContentType =>
                         Web::AssetLib::Util::normalizeMimeType($type)
                 );
+
+                if ( $self->object_expiration_cb ) {
+                    $putargs{Expires}
+                        = $self->object_expiration_cb->( \%putargs )->iso8601;
+                }
+
+                my $put = $self->s3->PutObject(%putargs);
 
                 $cacheInvalid = 1;
             }
