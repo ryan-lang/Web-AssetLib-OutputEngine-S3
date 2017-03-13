@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: S3 output engine for Web::AssetLib
-our $VERSION = "0.04";
+our $VERSION = "0.041";
 
 use strict;
 use warnings;
@@ -13,6 +13,7 @@ use Paws;
 use Paws::Credential::Environment;
 use Types::Standard qw/Str InstanceOf HashRef Maybe CodeRef/;
 use Web::AssetLib::Output::Link;
+use DateTime::Format::HTTP;
 
 extends 'Web::AssetLib::OutputEngine';
 
@@ -145,7 +146,8 @@ method export (:$assets!, :$minifier?) {
 
                 if ( $self->object_expiration_cb ) {
                     $putargs{Expires}
-                        = $self->object_expiration_cb->( \%putargs )->iso8601;
+                        = DateTime::Format::HTTP->format_datetime(
+                        $self->object_expiration_cb->( \%putargs ) );
                 }
 
                 my $put = $self->s3->PutObject(%putargs);
