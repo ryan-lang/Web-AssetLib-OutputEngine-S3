@@ -42,6 +42,7 @@
       },
       "runtime" : {
          "requires" : {
+            "DateTime::Format::HTTP" : "0",
             "Kavorka" : "0",
             "Moo" : "0",
             "Paws" : "0",
@@ -57,6 +58,6 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.04",
+   "version" : "0.041",
    "x_serialization_backend" : "JSON::PP version 2.27400"
 }
