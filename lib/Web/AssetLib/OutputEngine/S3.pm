@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: S3 output engine for Web::AssetLib
-our $VERSION = "0.04";
+our $VERSION = "0.041";
 
 use strict;
 use warnings;
