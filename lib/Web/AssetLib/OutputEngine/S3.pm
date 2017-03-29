@@ -1,6 +1,6 @@
 package Web::AssetLib::OutputEngine::S3;
 
-# ABSTRACT: S3 output engine for Web::AssetLib
+# ABSTRACT: AWS S3 output engine for Web::AssetLib
 our $VERSION = "0.041";
 
 use strict;
@@ -203,10 +203,82 @@ no Moose;
 1;
 __END__
 
-=encoding utf-8
+=pod
  
+=encoding UTF-8
+ 
+=head1 NAME
+
+Web::AssetLib::OutputEngine::S3 - allows exporting an asset or bundle to an AWS S3 Bucket
+
+On first usage, a cache will be generated of all files in the bucket. This way, we know
+what needs to be uploaded and what's already there.
+
+=head1 SYNOPSIS
+
+    my $library = My::AssetLib::Library->new(
+        output_engines => [
+            Web::AssetLib::OutputEngine::S3->new(
+                access_key  => 'AWS_ACCESS_KEY',
+                secret_key  => 'AWS_SECRET_KEY',
+                bucket_name => 'S3_BUCKET_NAME',
+                region      => 'S3_BUCKET_REGION'
+            )
+        ]
+    );
+
+    $library->compile( ..., output_engine => 'S3' );
+
+=head1 USAGE
+
+This is an output engine plugin for L<Web::AssetLib>.
+
+Instantiate with C<< access_key >>, C<< secret_key >>, C<< bucket_name >>, 
+and C<< region >> arguments, and include in your library's output engine list.
+
+=head1 PARAMETERS
+ 
+=head2 access_key
+
+=head2 secret_key
+ 
+AWS access & secret keys. Must have C<List> and C<Put> permissions for destination bucket. 
+Required.
+
+=head2 bucket_name
+
+S3 bucket name. Required.
+
+=head2 region
+
+AWS region name of the bucket. Required.
+
+=head2 region
+
+AWS region name of the bucket
+
+=head2 link_url
+
+Used as the base url of any asset that gets exported to S3. Make sure it's public!
+Your CDN may go here.
+
+=head2 object_expiration_cb
+
+Provide a coderef used to calculate the Expiration header. Currently, 
+no arguments are passed to the callback. Defaults to:
+
+    sub {
+        return DateTime->now( time_zone => 'local' )->add( years => 1 );
+    };
+
+=head1 SEE ALSO
+
+L<Web::AssetLib>
+L<Web::AssetLib::OutputEngine>
+
 =head1 AUTHOR
  
-Ryan Lang <rlang@me.com>
- 
+Ryan Lang <rlang@cpan.org>
+
 =cut
+
