@@ -1,7 +1,7 @@
 {
-   "abstract" : "S3 output engine for Web::AssetLib",
+   "abstract" : "allows exporting an asset or bundle to an AWS S3 Bucket",
    "author" : [
-      "Ryan Lang <rlang@me.com>"
+      "Ryan Lang <rlang@cpan.org>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.0.6, CPAN::Meta::Converter version 2.150010",
@@ -58,6 +58,20 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.041",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ryan-lang/Web-AssetLib-OutputEngine-S3/issues"
+      },
+      "homepage" : "https://github.com/ryan-lang/Web-AssetLib-OutputEngine-S3",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ryan-lang/Web-AssetLib-OutputEngine-S3.git",
+         "web" : "https://github.com/ryan-lang/Web-AssetLib-OutputEngine-S3"
+      }
+   },
+   "version" : "0.042",
+   "x_contributors" : [
+      "Ryan Lang <rlang@me.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 2.27400"
 }
