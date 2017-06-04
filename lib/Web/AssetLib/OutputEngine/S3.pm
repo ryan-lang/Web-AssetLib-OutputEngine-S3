@@ -32,6 +32,15 @@ has 'bucket_name' => (
     required => 1
 );
 
+# optional unique identifier - 
+# if provided, assets will be placed
+# in this subdirectory
+has 'bucket_uuid' => (
+    is        => 'rw',
+    isa       => Maybe [Str],
+    predicate => 'has_bucket_uuid'
+);
+
 has 'region' => (
     is       => 'rw',
     isa      => Str,
@@ -123,7 +132,9 @@ method export (:$assets!, :$minifier?) {
                 ? $self->generateDigest($output_contents)
                 : $id;
 
-            my $filename = "assets/$digest.$type";
+            my $filename = sprintf( "assets/%s$digest.$type",
+                $self->has_bucket_uuid ? $self->bucket_uuid . "/" : "" );
+
             if ( $self->_s3_obj_cache->{$filename} ) {
                 $self->log->debug("found asset in cache: $filename");
             }
@@ -170,7 +181,12 @@ method export (:$assets!, :$minifier?) {
 }
 
 method _build__s3_obj_cache (@_) {
-    my $results = $self->s3->ListObjects( Bucket => $self->bucket_name );
+    my $results = $self->s3->ListObjects(
+        Bucket => $self->bucket_name,
+        Prefix => sprintf( "assets/%s",
+            $self->has_bucket_uuid ? $self->bucket_uuid . "/" : "" )
+    );
+
     my $cache = { map { $_->Key => 1 } @{ $results->Contents } };
 
     $self->log->dump( 's3 object cache: ', $cache, 'debug' );
