@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: AWS S3 output engine for Web::AssetLib
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 
 use strict;
 use warnings;
@@ -32,7 +32,7 @@ has 'bucket_name' => (
     required => 1
 );
 
-# optional unique identifier - 
+# optional unique identifier -
 # if provided, assets will be placed
 # in this subdirectory
 has 'bucket_uuid' => (
@@ -92,85 +92,106 @@ has '_s3_obj_cache' => (
 );
 
 method export (:$assets!, :$minifier?) {
-    my $types  = {};
     my $output = [];
 
     # categorize into type groups, and seperate concatenated
     # assets from those that stand alone
 
-    foreach my $asset ( sort { $a->rank <=> $b->rank } @$assets ) {
-        if ( $asset->isPassthru ) {
-            push @$output,
-                Web::AssetLib::Output::Link->new(
-                src  => $asset->link_path,
-                type => $asset->type
-                );
-        }
-        else {
-            for ( $asset->type ) {
-                when (/css|js/) {
-
-                    # should concatenate
-                    $$types{ $asset->type }{_CONCAT_}
-                        .= $asset->contents . "\n\r\n\r";
-                }
-                default {
-                    $$types{ $asset->type }{ $asset->digest }
-                        = $asset->contents;
-                }
-            }
-        }
-    }
+    my $assets_by_type = $self->sortAssetsByType($assets);
 
     my $cacheInvalid = 0;
-    foreach my $type ( keys %$types ) {
-        foreach my $id ( keys %{ $$types{$type} } ) {
-            my $output_contents = $$types{$type}{$id};
+    foreach my $type ( keys %$assets_by_type ) {
+        foreach my $asset ( @{ $$assets_by_type{$type} } ) {
 
-            my $digest
-                = $id eq '_CONCAT_'
-                ? $self->generateDigest($output_contents)
-                : $id;
-
-            my $filename = sprintf( "assets/%s$digest.$type",
-                $self->has_bucket_uuid ? $self->bucket_uuid . "/" : "" );
-
-            if ( $self->_s3_obj_cache->{$filename} ) {
-                $self->log->debug("found asset in cache: $filename");
+            if ( ref($asset) && $asset->isPassthru ) {
+                push @$output,
+                    Web::AssetLib::Output::Link->new(
+                    src  => $asset->link_path,
+                    type => $type
+                    );
             }
             else {
-                $self->log->debug("generating new asset: $filename");
-                if ($minifier) {
-                    $output_contents = $minifier->minify(
-                        contents => $output_contents,
-                        type     => $type
+                my $contents = ref($asset) ? $asset->contents : $asset;
+                my $name = ( ref($asset) ? $asset->name : undef ) // 'bundle';
+                my $digest
+                    = ref($asset)
+                    ? $asset->digest
+                    : $self->generateDigest($contents);
+
+                my $filename;
+
+                # use orignal filename, or generate new one
+                # based on digest
+                if (   ref($asset)
+                    && $asset->useOriginalFilename
+                    && $asset->original_filename )
+                {
+                    $filename = $asset->original_filename;
+                }
+                else {
+                    $filename = "$name.$digest.$type";
+                }
+
+                # apply bucket uuid, unless prevented
+                unless ( ref($asset)
+                    && $asset->output_args->{ignore_bucket_uuid} )
+                {
+                    $filename = sprintf( '%s%s',
+                          $self->has_bucket_uuid
+                        ? $self->bucket_uuid . '/'
+                        : '',
+                        $filename );
+                }
+
+                # apply output subdir, if provided
+                if ( ref($asset) && $asset->output_args->{output_subdir} ) {
+                    $filename
+                        = $asset->output_args->{output_subdir} . "/$filename";
+                }
+
+                # always in assets subdir
+                $filename = "assets/$filename";
+
+                if ( $self->_s3_obj_cache->{$filename} ) {
+                    $self->log->debug("found asset in cache: $filename");
+                }
+                else {
+                    $self->log->debug(
+                        sprintf( 'emitted: %s/%s',
+                            $self->link_url, $filename )
                     );
+                    if ($minifier) {
+                        $contents = $minifier->minify(
+                            contents => $contents,
+                            type     => $type
+                        );
+                    }
+
+                    my %putargs = (
+                        Bucket => $self->bucket_name,
+                        Key    => $filename,
+                        Body   => $contents,
+                        ContentType =>
+                            Web::AssetLib::Util::normalizeMimeType($type)
+                    );
+
+                    if ( $self->object_expiration_cb ) {
+                        $putargs{Expires}
+                            = DateTime::Format::HTTP->format_datetime(
+                            $self->object_expiration_cb->( \%putargs ) );
+                    }
+
+                    my $put = $self->s3->PutObject(%putargs);
+
+                    $cacheInvalid = 1;
                 }
 
-                my %putargs = (
-                    Bucket => $self->bucket_name,
-                    Key    => $filename,
-                    Body   => $output_contents,
-                    ContentType =>
-                        Web::AssetLib::Util::normalizeMimeType($type)
-                );
-
-                if ( $self->object_expiration_cb ) {
-                    $putargs{Expires}
-                        = DateTime::Format::HTTP->format_datetime(
-                        $self->object_expiration_cb->( \%putargs ) );
-                }
-
-                my $put = $self->s3->PutObject(%putargs);
-
-                $cacheInvalid = 1;
+                push @$output,
+                    Web::AssetLib::Output::Link->new(
+                    src  => sprintf( '%s/%s', $self->link_url, $filename ),
+                    type => $type
+                    );
             }
-
-            push @$output,
-                Web::AssetLib::Output::Link->new(
-                src  => sprintf( '%s/%s', $self->link_url, $filename ),
-                type => $type
-                );
         }
     }
 
