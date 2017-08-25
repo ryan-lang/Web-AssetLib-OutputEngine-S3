@@ -69,7 +69,7 @@
          "web" : "https://github.com/ryan-lang/Web-AssetLib-OutputEngine-S3"
       }
    },
-   "version" : "0.05",
+   "version" : "0.06",
    "x_contributors" : [
       "Ryan Lang <rlang@me.com>"
    ],
