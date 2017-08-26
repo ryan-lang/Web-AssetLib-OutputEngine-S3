@@ -1,6 +1,6 @@
 requires 'perl', '5.018004';
 
-requires 'Web::AssetLib';
+requires 'Web::AssetLib','0.07';
 requires 'Moo';
 requires 'Kavorka';
 requires 'Paws';

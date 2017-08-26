@@ -1,7 +1,7 @@
 package Web::AssetLib::OutputEngine::S3;
 
 # ABSTRACT: AWS S3 output engine for Web::AssetLib
-our $VERSION = "0.06";
+our $VERSION = "0.07";
 
 use strict;
 use warnings;
@@ -132,33 +132,35 @@ method export (:$assets!, :$minifier?) {
                     $filename = "$name.$digest.$type";
                 }
 
-                # apply bucket uuid, unless prevented
-                unless ( ref($asset)
-                    && $asset->output_args->{ignore_bucket_uuid} )
-                {
-                    $filename = sprintf( '%s%s',
-                          $self->has_bucket_uuid
-                        ? $self->bucket_uuid . '/'
-                        : '',
-                        $filename );
-                }
+                # always in assets subdir
+                my @path = ('assets');
 
                 # apply output subdir, if provided
                 if ( ref($asset) && $asset->output_args->{output_subdir} ) {
-                    $filename
-                        = $asset->output_args->{output_subdir} . "/$filename";
+                    push @path, $asset->output_args->{output_subdir};
                 }
 
-                # always in assets subdir
-                $filename = "assets/$filename";
+                # apply bucket uuid, unless prevented or not provided
+                unless (
+                    (   ref($asset)
+                        && $asset->output_args->{ignore_bucket_uuid}
+                    )
+                    || !$self->has_bucket_uuid
+                    )
+                {
+                    push @path, $self->bucket_uuid;
+                }
 
-                if ( $self->_s3_obj_cache->{$filename} ) {
-                    $self->log->debug("found asset in cache: $filename");
+                my $path = join( '/', @path ) . "/";
+                my $fullpath = $path . $filename;
+
+                if ( $self->_s3_obj_cache->{$fullpath} ) {
+                    $self->log->debug("found asset in cache: $fullpath");
                 }
                 else {
                     $self->log->debug(
                         sprintf( 'emitted: %s/%s',
-                            $self->link_url, $filename )
+                            $self->link_url, $fullpath )
                     );
                     if ($minifier) {
                         $contents = $minifier->minify(
@@ -167,28 +169,36 @@ method export (:$assets!, :$minifier?) {
                         );
                     }
 
-                    my %putargs = (
-                        Bucket => $self->bucket_name,
-                        Key    => $filename,
-                        Body   => $contents,
-                        ContentType =>
-                            Web::AssetLib::Util::normalizeMimeType($type)
+                    $self->_s3Put(
+                        filename => $fullpath,
+                        contents => $contents,
+                        type     => $type
                     );
 
-                    if ( $self->object_expiration_cb ) {
-                        $putargs{Expires}
-                            = DateTime::Format::HTTP->format_datetime(
-                            $self->object_expiration_cb->( \%putargs ) );
-                    }
+                    if (   ref($asset)
+                        && $asset->source_map_contents
+                        && length( $asset->source_map_contents ) > 0 )
+                    {
 
-                    my $put = $self->s3->PutObject(%putargs);
+                        my $srcmap_path = $path . $asset->source_map_name;
+                        $self->_s3Put(
+                            filename => $srcmap_path,
+                            contents => $asset->source_map_contents,
+                            type     => 'map'
+                        );
+
+                        $self->log->debug(
+                            sprintf( 'emitted: %s/%s',
+                                $self->link_url, $srcmap_path )
+                        );
+                    }
 
                     $cacheInvalid = 1;
                 }
 
                 push @$output,
                     Web::AssetLib::Output::Link->new(
-                    src  => sprintf( '%s/%s', $self->link_url, $filename ),
+                    src  => sprintf( '%s/%s', $self->link_url, $fullpath ),
                     type => $type
                     );
             }
@@ -199,6 +209,25 @@ method export (:$assets!, :$minifier?) {
         if $cacheInvalid;
 
     return $output;
+}
+
+method _s3Put (:$filename, :$contents, :$type) {
+    my %putargs = (
+        Bucket      => $self->bucket_name,
+        Key         => $filename,
+        Body        => $contents,
+        ContentType => Web::AssetLib::Util::normalizeMimeType($type)
+    );
+
+    if ( $self->object_expiration_cb ) {
+        $putargs{Expires}
+            = DateTime::Format::HTTP->format_datetime(
+            $self->object_expiration_cb->( \%putargs ) );
+    }
+
+    my $put = $self->s3->PutObject(%putargs);
+
+    return $put;
 }
 
 method _build__s3_obj_cache (@_) {

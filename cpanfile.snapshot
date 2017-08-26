@@ -1330,6 +1330,16 @@ DISTRIBUTIONS
       JSON::PP 2.27300
       Scalar::Util 0
       perl 5.006
+  JavaScript-Beautifier-0.20
+    pathname: F/FA/FAYLAND/JavaScript-Beautifier-0.20.tar.gz
+    provides:
+      Code::TidyAll::Plugin::JSBeautifier 0.18
+      JavaScript::Beautifier 0.20
+    requirements:
+      Getopt::Long 0
+      IO::File 0
+      Pod::Usage 0
+      Test::More 0.88
   Kavorka-0.036
     pathname: T/TO/TOBYINK/Kavorka-0.036.tar.gz
     provides:
@@ -2575,6 +2585,31 @@ DISTRIBUTIONS
       lib 0
       strict 0
       warnings 0
+  Path-Class-0.37
+    pathname: K/KW/KWILLIAMS/Path-Class-0.37.tar.gz
+    provides:
+      Path::Class 0.37
+      Path::Class::Dir 0.37
+      Path::Class::Entity 0.37
+      Path::Class::File 0.37
+    requirements:
+      Carp 0
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Copy 0
+      File::Path 0
+      File::Spec 3.26
+      File::Temp 0
+      File::stat 0
+      IO::Dir 0
+      IO::File 0
+      Module::Build 0.3601
+      Perl::OSType 0
+      Scalar::Util 0
+      overload 0
+      parent 0
+      strict 0
   Path-Tiny-0.098
     pathname: D/DA/DAGOLDEN/Path-Tiny-0.098.tar.gz
     provides:
@@ -2600,10 +2635,10 @@ DISTRIBUTIONS
       perl 5.008001
       strict 0
       warnings 0
-  Paws-0.28
-    pathname: J/JL/JLMARTIN/Paws-0.28.tar.gz
+  Paws-0.31
+    pathname: J/JL/JLMARTIN/Paws-0.31.tar.gz
     provides:
-      Paws 0.28
+      Paws 0.31
       Paws::ACM undef
       Paws::ACM::AddTagsToCertificate undef
       Paws::ACM::CertificateDetail undef
@@ -2615,11 +2650,14 @@ DISTRIBUTIONS
       Paws::ACM::DomainValidationOption undef
       Paws::ACM::GetCertificate undef
       Paws::ACM::GetCertificateResponse undef
+      Paws::ACM::ImportCertificate undef
+      Paws::ACM::ImportCertificateResponse undef
       Paws::ACM::ListCertificates undef
       Paws::ACM::ListCertificatesResponse undef
       Paws::ACM::ListTagsForCertificate undef
       Paws::ACM::ListTagsForCertificateResponse undef
       Paws::ACM::RemoveTagsFromCertificate undef
+      Paws::ACM::RenewalSummary undef
       Paws::ACM::RequestCertificate undef
       Paws::ACM::RequestCertificateResponse undef
       Paws::ACM::ResendValidationEmail undef
@@ -2635,6 +2673,7 @@ DISTRIBUTIONS
       Paws::API::EndpointResolver undef
       Paws::API::JSONAttribute undef
       Paws::API::MapParser undef
+      Paws::API::Response undef
       Paws::API::Retry undef
       Paws::API::StrToNativeMapParser undef
       Paws::API::StrToObjMapParser undef
@@ -2654,6 +2693,8 @@ DISTRIBUTIONS
       Paws::ApiGateway::CreateAuthorizer undef
       Paws::ApiGateway::CreateBasePathMapping undef
       Paws::ApiGateway::CreateDeployment undef
+      Paws::ApiGateway::CreateDocumentationPart undef
+      Paws::ApiGateway::CreateDocumentationVersion undef
       Paws::ApiGateway::CreateDomainName undef
       Paws::ApiGateway::CreateModel undef
       Paws::ApiGateway::CreateResource undef
@@ -2666,6 +2707,8 @@ DISTRIBUTIONS
       Paws::ApiGateway::DeleteBasePathMapping undef
       Paws::ApiGateway::DeleteClientCertificate undef
       Paws::ApiGateway::DeleteDeployment undef
+      Paws::ApiGateway::DeleteDocumentationPart undef
+      Paws::ApiGateway::DeleteDocumentationVersion undef
       Paws::ApiGateway::DeleteDomainName undef
       Paws::ApiGateway::DeleteIntegration undef
       Paws::ApiGateway::DeleteIntegrationResponse undef
@@ -2679,6 +2722,12 @@ DISTRIBUTIONS
       Paws::ApiGateway::DeleteUsagePlanKey undef
       Paws::ApiGateway::Deployment undef
       Paws::ApiGateway::Deployments undef
+      Paws::ApiGateway::DocumentationPart undef
+      Paws::ApiGateway::DocumentationPartIds undef
+      Paws::ApiGateway::DocumentationPartLocation undef
+      Paws::ApiGateway::DocumentationParts undef
+      Paws::ApiGateway::DocumentationVersion undef
+      Paws::ApiGateway::DocumentationVersions undef
       Paws::ApiGateway::DomainName undef
       Paws::ApiGateway::DomainNames undef
       Paws::ApiGateway::ExportResponse undef
@@ -2696,6 +2745,10 @@ DISTRIBUTIONS
       Paws::ApiGateway::GetClientCertificates undef
       Paws::ApiGateway::GetDeployment undef
       Paws::ApiGateway::GetDeployments undef
+      Paws::ApiGateway::GetDocumentationPart undef
+      Paws::ApiGateway::GetDocumentationParts undef
+      Paws::ApiGateway::GetDocumentationVersion undef
+      Paws::ApiGateway::GetDocumentationVersions undef
       Paws::ApiGateway::GetDomainName undef
       Paws::ApiGateway::GetDomainNames undef
       Paws::ApiGateway::GetExport undef
@@ -2711,6 +2764,8 @@ DISTRIBUTIONS
       Paws::ApiGateway::GetRestApi undef
       Paws::ApiGateway::GetRestApis undef
       Paws::ApiGateway::GetSdk undef
+      Paws::ApiGateway::GetSdkType undef
+      Paws::ApiGateway::GetSdkTypes undef
       Paws::ApiGateway::GetStage undef
       Paws::ApiGateway::GetStages undef
       Paws::ApiGateway::GetUsage undef
@@ -2719,6 +2774,7 @@ DISTRIBUTIONS
       Paws::ApiGateway::GetUsagePlanKeys undef
       Paws::ApiGateway::GetUsagePlans undef
       Paws::ApiGateway::ImportApiKeys undef
+      Paws::ApiGateway::ImportDocumentationParts undef
       Paws::ApiGateway::ImportRestApi undef
       Paws::ApiGateway::Integration undef
       Paws::ApiGateway::IntegrationResponse undef
@@ -2750,7 +2806,10 @@ DISTRIBUTIONS
       Paws::ApiGateway::Resources undef
       Paws::ApiGateway::RestApi undef
       Paws::ApiGateway::RestApis undef
+      Paws::ApiGateway::SdkConfigurationProperty undef
       Paws::ApiGateway::SdkResponse undef
+      Paws::ApiGateway::SdkType undef
+      Paws::ApiGateway::SdkTypes undef
       Paws::ApiGateway::Stage undef
       Paws::ApiGateway::StageKey undef
       Paws::ApiGateway::Stages undef
@@ -2766,6 +2825,8 @@ DISTRIBUTIONS
       Paws::ApiGateway::UpdateBasePathMapping undef
       Paws::ApiGateway::UpdateClientCertificate undef
       Paws::ApiGateway::UpdateDeployment undef
+      Paws::ApiGateway::UpdateDocumentationPart undef
+      Paws::ApiGateway::UpdateDocumentationVersion undef
       Paws::ApiGateway::UpdateDomainName undef
       Paws::ApiGateway::UpdateIntegration undef
       Paws::ApiGateway::UpdateIntegrationResponse undef
@@ -2782,6 +2843,54 @@ DISTRIBUTIONS
       Paws::ApiGateway::UsagePlanKey undef
       Paws::ApiGateway::UsagePlanKeys undef
       Paws::ApiGateway::UsagePlans undef
+      Paws::AppStream undef
+      Paws::AppStream::Application undef
+      Paws::AppStream::AssociateFleet undef
+      Paws::AppStream::AssociateFleetResult undef
+      Paws::AppStream::ComputeCapacity undef
+      Paws::AppStream::ComputeCapacityStatus undef
+      Paws::AppStream::CreateFleet undef
+      Paws::AppStream::CreateFleetResult undef
+      Paws::AppStream::CreateStack undef
+      Paws::AppStream::CreateStackResult undef
+      Paws::AppStream::CreateStreamingURL undef
+      Paws::AppStream::CreateStreamingURLResult undef
+      Paws::AppStream::DeleteFleet undef
+      Paws::AppStream::DeleteFleetResult undef
+      Paws::AppStream::DeleteStack undef
+      Paws::AppStream::DeleteStackResult undef
+      Paws::AppStream::DescribeFleets undef
+      Paws::AppStream::DescribeFleetsResult undef
+      Paws::AppStream::DescribeImages undef
+      Paws::AppStream::DescribeImagesResult undef
+      Paws::AppStream::DescribeSessions undef
+      Paws::AppStream::DescribeSessionsResult undef
+      Paws::AppStream::DescribeStacks undef
+      Paws::AppStream::DescribeStacksResult undef
+      Paws::AppStream::DisassociateFleet undef
+      Paws::AppStream::DisassociateFleetResult undef
+      Paws::AppStream::ExpireSession undef
+      Paws::AppStream::ExpireSessionResult undef
+      Paws::AppStream::Fleet undef
+      Paws::AppStream::FleetError undef
+      Paws::AppStream::Image undef
+      Paws::AppStream::ImageStateChangeReason undef
+      Paws::AppStream::ListAssociatedFleets undef
+      Paws::AppStream::ListAssociatedFleetsResult undef
+      Paws::AppStream::ListAssociatedStacks undef
+      Paws::AppStream::ListAssociatedStacksResult undef
+      Paws::AppStream::Metadata undef
+      Paws::AppStream::Session undef
+      Paws::AppStream::Stack undef
+      Paws::AppStream::StartFleet undef
+      Paws::AppStream::StartFleetResult undef
+      Paws::AppStream::StopFleet undef
+      Paws::AppStream::StopFleetResult undef
+      Paws::AppStream::UpdateFleet undef
+      Paws::AppStream::UpdateFleetResult undef
+      Paws::AppStream::UpdateStack undef
+      Paws::AppStream::UpdateStackResult undef
+      Paws::AppStream::VpcConfig undef
       Paws::ApplicationAutoScaling undef
       Paws::ApplicationAutoScaling::Alarm undef
       Paws::ApplicationAutoScaling::DeleteScalingPolicy undef
@@ -2913,6 +3022,247 @@ DISTRIBUTIONS
       Paws::AutoScaling::TagsType undef
       Paws::AutoScaling::TerminateInstanceInAutoScalingGroup undef
       Paws::AutoScaling::UpdateAutoScalingGroup undef
+      Paws::Batch undef
+      Paws::Batch::CancelJob undef
+      Paws::Batch::CancelJobResponse undef
+      Paws::Batch::ComputeEnvironmentDetail undef
+      Paws::Batch::ComputeEnvironmentOrder undef
+      Paws::Batch::ComputeResource undef
+      Paws::Batch::ComputeResourceUpdate undef
+      Paws::Batch::ContainerDetail undef
+      Paws::Batch::ContainerOverrides undef
+      Paws::Batch::ContainerProperties undef
+      Paws::Batch::CreateComputeEnvironment undef
+      Paws::Batch::CreateComputeEnvironmentResponse undef
+      Paws::Batch::CreateJobQueue undef
+      Paws::Batch::CreateJobQueueResponse undef
+      Paws::Batch::DeleteComputeEnvironment undef
+      Paws::Batch::DeleteComputeEnvironmentResponse undef
+      Paws::Batch::DeleteJobQueue undef
+      Paws::Batch::DeleteJobQueueResponse undef
+      Paws::Batch::DeregisterJobDefinition undef
+      Paws::Batch::DeregisterJobDefinitionResponse undef
+      Paws::Batch::DescribeComputeEnvironments undef
+      Paws::Batch::DescribeComputeEnvironmentsResponse undef
+      Paws::Batch::DescribeJobDefinitions undef
+      Paws::Batch::DescribeJobDefinitionsResponse undef
+      Paws::Batch::DescribeJobQueues undef
+      Paws::Batch::DescribeJobQueuesResponse undef
+      Paws::Batch::DescribeJobs undef
+      Paws::Batch::DescribeJobsResponse undef
+      Paws::Batch::Host undef
+      Paws::Batch::JobDefinition undef
+      Paws::Batch::JobDependency undef
+      Paws::Batch::JobDetail undef
+      Paws::Batch::JobQueueDetail undef
+      Paws::Batch::JobSummary undef
+      Paws::Batch::KeyValuePair undef
+      Paws::Batch::ListJobs undef
+      Paws::Batch::ListJobsResponse undef
+      Paws::Batch::MountPoint undef
+      Paws::Batch::ParametersMap undef
+      Paws::Batch::RegisterJobDefinition undef
+      Paws::Batch::RegisterJobDefinitionResponse undef
+      Paws::Batch::SubmitJob undef
+      Paws::Batch::SubmitJobResponse undef
+      Paws::Batch::TagsMap undef
+      Paws::Batch::TerminateJob undef
+      Paws::Batch::TerminateJobResponse undef
+      Paws::Batch::Ulimit undef
+      Paws::Batch::UpdateComputeEnvironment undef
+      Paws::Batch::UpdateComputeEnvironmentResponse undef
+      Paws::Batch::UpdateJobQueue undef
+      Paws::Batch::UpdateJobQueueResponse undef
+      Paws::Batch::Volume undef
+      Paws::Budgets undef
+      Paws::Budgets::Budget undef
+      Paws::Budgets::CalculatedSpend undef
+      Paws::Budgets::CostFilters undef
+      Paws::Budgets::CostTypes undef
+      Paws::Budgets::CreateBudget undef
+      Paws::Budgets::CreateBudgetResponse undef
+      Paws::Budgets::CreateNotification undef
+      Paws::Budgets::CreateNotificationResponse undef
+      Paws::Budgets::CreateSubscriber undef
+      Paws::Budgets::CreateSubscriberResponse undef
+      Paws::Budgets::DeleteBudget undef
+      Paws::Budgets::DeleteBudgetResponse undef
+      Paws::Budgets::DeleteNotification undef
+      Paws::Budgets::DeleteNotificationResponse undef
+      Paws::Budgets::DeleteSubscriber undef
+      Paws::Budgets::DeleteSubscriberResponse undef
+      Paws::Budgets::DescribeBudget undef
+      Paws::Budgets::DescribeBudgetResponse undef
+      Paws::Budgets::DescribeBudgets undef
+      Paws::Budgets::DescribeBudgetsResponse undef
+      Paws::Budgets::DescribeNotificationsForBudget undef
+      Paws::Budgets::DescribeNotificationsForBudgetResponse undef
+      Paws::Budgets::DescribeSubscribersForNotification undef
+      Paws::Budgets::DescribeSubscribersForNotificationResponse undef
+      Paws::Budgets::Notification undef
+      Paws::Budgets::NotificationWithSubscribers undef
+      Paws::Budgets::Spend undef
+      Paws::Budgets::Subscriber undef
+      Paws::Budgets::TimePeriod undef
+      Paws::Budgets::UpdateBudget undef
+      Paws::Budgets::UpdateBudgetResponse undef
+      Paws::Budgets::UpdateNotification undef
+      Paws::Budgets::UpdateNotificationResponse undef
+      Paws::Budgets::UpdateSubscriber undef
+      Paws::Budgets::UpdateSubscriberResponse undef
+      Paws::CUR undef
+      Paws::CUR::DeleteReportDefinition undef
+      Paws::CUR::DeleteReportDefinitionResponse undef
+      Paws::CUR::DescribeReportDefinitions undef
+      Paws::CUR::DescribeReportDefinitionsResponse undef
+      Paws::CUR::PutReportDefinition undef
+      Paws::CUR::PutReportDefinitionResponse undef
+      Paws::CUR::ReportDefinition undef
+      Paws::CloudDirectory undef
+      Paws::CloudDirectory::AddFacetToObject undef
+      Paws::CloudDirectory::AddFacetToObjectResponse undef
+      Paws::CloudDirectory::ApplySchema undef
+      Paws::CloudDirectory::ApplySchemaResponse undef
+      Paws::CloudDirectory::AttachObject undef
+      Paws::CloudDirectory::AttachObjectResponse undef
+      Paws::CloudDirectory::AttachPolicy undef
+      Paws::CloudDirectory::AttachPolicyResponse undef
+      Paws::CloudDirectory::AttachToIndex undef
+      Paws::CloudDirectory::AttachToIndexResponse undef
+      Paws::CloudDirectory::AttributeKey undef
+      Paws::CloudDirectory::AttributeKeyAndValue undef
+      Paws::CloudDirectory::BatchAddFacetToObject undef
+      Paws::CloudDirectory::BatchAddFacetToObjectResponse undef
+      Paws::CloudDirectory::BatchAttachObject undef
+      Paws::CloudDirectory::BatchAttachObjectResponse undef
+      Paws::CloudDirectory::BatchCreateObject undef
+      Paws::CloudDirectory::BatchCreateObjectResponse undef
+      Paws::CloudDirectory::BatchDeleteObject undef
+      Paws::CloudDirectory::BatchDeleteObjectResponse undef
+      Paws::CloudDirectory::BatchDetachObject undef
+      Paws::CloudDirectory::BatchDetachObjectResponse undef
+      Paws::CloudDirectory::BatchListObjectAttributes undef
+      Paws::CloudDirectory::BatchListObjectAttributesResponse undef
+      Paws::CloudDirectory::BatchListObjectChildren undef
+      Paws::CloudDirectory::BatchListObjectChildrenResponse undef
+      Paws::CloudDirectory::BatchRead undef
+      Paws::CloudDirectory::BatchReadException undef
+      Paws::CloudDirectory::BatchReadOperation undef
+      Paws::CloudDirectory::BatchReadOperationResponse undef
+      Paws::CloudDirectory::BatchReadResponse undef
+      Paws::CloudDirectory::BatchReadSuccessfulResponse undef
+      Paws::CloudDirectory::BatchRemoveFacetFromObject undef
+      Paws::CloudDirectory::BatchRemoveFacetFromObjectResponse undef
+      Paws::CloudDirectory::BatchUpdateObjectAttributes undef
+      Paws::CloudDirectory::BatchUpdateObjectAttributesResponse undef
+      Paws::CloudDirectory::BatchWrite undef
+      Paws::CloudDirectory::BatchWriteOperation undef
+      Paws::CloudDirectory::BatchWriteOperationResponse undef
+      Paws::CloudDirectory::BatchWriteResponse undef
+      Paws::CloudDirectory::CreateDirectory undef
+      Paws::CloudDirectory::CreateDirectoryResponse undef
+      Paws::CloudDirectory::CreateFacet undef
+      Paws::CloudDirectory::CreateFacetResponse undef
+      Paws::CloudDirectory::CreateIndex undef
+      Paws::CloudDirectory::CreateIndexResponse undef
+      Paws::CloudDirectory::CreateObject undef
+      Paws::CloudDirectory::CreateObjectResponse undef
+      Paws::CloudDirectory::CreateSchema undef
+      Paws::CloudDirectory::CreateSchemaResponse undef
+      Paws::CloudDirectory::DeleteDirectory undef
+      Paws::CloudDirectory::DeleteDirectoryResponse undef
+      Paws::CloudDirectory::DeleteFacet undef
+      Paws::CloudDirectory::DeleteFacetResponse undef
+      Paws::CloudDirectory::DeleteObject undef
+      Paws::CloudDirectory::DeleteObjectResponse undef
+      Paws::CloudDirectory::DeleteSchema undef
+      Paws::CloudDirectory::DeleteSchemaResponse undef
+      Paws::CloudDirectory::DetachFromIndex undef
+      Paws::CloudDirectory::DetachFromIndexResponse undef
+      Paws::CloudDirectory::DetachObject undef
+      Paws::CloudDirectory::DetachObjectResponse undef
+      Paws::CloudDirectory::DetachPolicy undef
+      Paws::CloudDirectory::DetachPolicyResponse undef
+      Paws::CloudDirectory::Directory undef
+      Paws::CloudDirectory::DisableDirectory undef
+      Paws::CloudDirectory::DisableDirectoryResponse undef
+      Paws::CloudDirectory::EnableDirectory undef
+      Paws::CloudDirectory::EnableDirectoryResponse undef
+      Paws::CloudDirectory::Facet undef
+      Paws::CloudDirectory::FacetAttribute undef
+      Paws::CloudDirectory::FacetAttributeDefinition undef
+      Paws::CloudDirectory::FacetAttributeReference undef
+      Paws::CloudDirectory::FacetAttributeUpdate undef
+      Paws::CloudDirectory::GetDirectory undef
+      Paws::CloudDirectory::GetDirectoryResponse undef
+      Paws::CloudDirectory::GetFacet undef
+      Paws::CloudDirectory::GetFacetResponse undef
+      Paws::CloudDirectory::GetObjectInformation undef
+      Paws::CloudDirectory::GetObjectInformationResponse undef
+      Paws::CloudDirectory::GetSchemaAsJson undef
+      Paws::CloudDirectory::GetSchemaAsJsonResponse undef
+      Paws::CloudDirectory::IndexAttachment undef
+      Paws::CloudDirectory::LinkNameToObjectIdentifierMap undef
+      Paws::CloudDirectory::ListAppliedSchemaArns undef
+      Paws::CloudDirectory::ListAppliedSchemaArnsResponse undef
+      Paws::CloudDirectory::ListAttachedIndices undef
+      Paws::CloudDirectory::ListAttachedIndicesResponse undef
+      Paws::CloudDirectory::ListDevelopmentSchemaArns undef
+      Paws::CloudDirectory::ListDevelopmentSchemaArnsResponse undef
+      Paws::CloudDirectory::ListDirectories undef
+      Paws::CloudDirectory::ListDirectoriesResponse undef
+      Paws::CloudDirectory::ListFacetAttributes undef
+      Paws::CloudDirectory::ListFacetAttributesResponse undef
+      Paws::CloudDirectory::ListFacetNames undef
+      Paws::CloudDirectory::ListFacetNamesResponse undef
+      Paws::CloudDirectory::ListIndex undef
+      Paws::CloudDirectory::ListIndexResponse undef
+      Paws::CloudDirectory::ListObjectAttributes undef
+      Paws::CloudDirectory::ListObjectAttributesResponse undef
+      Paws::CloudDirectory::ListObjectChildren undef
+      Paws::CloudDirectory::ListObjectChildrenResponse undef
+      Paws::CloudDirectory::ListObjectParents undef
+      Paws::CloudDirectory::ListObjectParentsResponse undef
+      Paws::CloudDirectory::ListObjectPolicies undef
+      Paws::CloudDirectory::ListObjectPoliciesResponse undef
+      Paws::CloudDirectory::ListPolicyAttachments undef
+      Paws::CloudDirectory::ListPolicyAttachmentsResponse undef
+      Paws::CloudDirectory::ListPublishedSchemaArns undef
+      Paws::CloudDirectory::ListPublishedSchemaArnsResponse undef
+      Paws::CloudDirectory::ListTagsForResource undef
+      Paws::CloudDirectory::ListTagsForResourceResponse undef
+      Paws::CloudDirectory::LookupPolicy undef
+      Paws::CloudDirectory::LookupPolicyResponse undef
+      Paws::CloudDirectory::ObjectAttributeAction undef
+      Paws::CloudDirectory::ObjectAttributeRange undef
+      Paws::CloudDirectory::ObjectAttributeUpdate undef
+      Paws::CloudDirectory::ObjectIdentifierToLinkNameMap undef
+      Paws::CloudDirectory::ObjectReference undef
+      Paws::CloudDirectory::PolicyAttachment undef
+      Paws::CloudDirectory::PolicyToPath undef
+      Paws::CloudDirectory::PublishSchema undef
+      Paws::CloudDirectory::PublishSchemaResponse undef
+      Paws::CloudDirectory::PutSchemaFromJson undef
+      Paws::CloudDirectory::PutSchemaFromJsonResponse undef
+      Paws::CloudDirectory::RemoveFacetFromObject undef
+      Paws::CloudDirectory::RemoveFacetFromObjectResponse undef
+      Paws::CloudDirectory::Rule undef
+      Paws::CloudDirectory::RuleMap undef
+      Paws::CloudDirectory::RuleParameterMap undef
+      Paws::CloudDirectory::SchemaFacet undef
+      Paws::CloudDirectory::Tag undef
+      Paws::CloudDirectory::TagResource undef
+      Paws::CloudDirectory::TagResourceResponse undef
+      Paws::CloudDirectory::TypedAttributeValue undef
+      Paws::CloudDirectory::TypedAttributeValueRange undef
+      Paws::CloudDirectory::UntagResource undef
+      Paws::CloudDirectory::UntagResourceResponse undef
+      Paws::CloudDirectory::UpdateFacet undef
+      Paws::CloudDirectory::UpdateFacetResponse undef
+      Paws::CloudDirectory::UpdateObjectAttributes undef
+      Paws::CloudDirectory::UpdateObjectAttributesResponse undef
+      Paws::CloudDirectory::UpdateSchema undef
+      Paws::CloudDirectory::UpdateSchemaResponse undef
       Paws::CloudFormation undef
       Paws::CloudFormation::AccountLimit undef
       Paws::CloudFormation::CancelUpdateStack undef
@@ -2943,6 +3293,7 @@ DISTRIBUTIONS
       Paws::CloudFormation::EstimateTemplateCostOutput undef
       Paws::CloudFormation::ExecuteChangeSet undef
       Paws::CloudFormation::ExecuteChangeSetOutput undef
+      Paws::CloudFormation::Export undef
       Paws::CloudFormation::GetStackPolicy undef
       Paws::CloudFormation::GetStackPolicyOutput undef
       Paws::CloudFormation::GetTemplate undef
@@ -2951,6 +3302,10 @@ DISTRIBUTIONS
       Paws::CloudFormation::GetTemplateSummaryOutput undef
       Paws::CloudFormation::ListChangeSets undef
       Paws::CloudFormation::ListChangeSetsOutput undef
+      Paws::CloudFormation::ListExports undef
+      Paws::CloudFormation::ListExportsOutput undef
+      Paws::CloudFormation::ListImports undef
+      Paws::CloudFormation::ListImportsOutput undef
       Paws::CloudFormation::ListStackResources undef
       Paws::CloudFormation::ListStackResourcesOutput undef
       Paws::CloudFormation::ListStacks undef
@@ -3036,6 +3391,8 @@ DISTRIBUTIONS
       Paws::CloudFront::InvalidationList undef
       Paws::CloudFront::InvalidationSummary undef
       Paws::CloudFront::KeyPairIds undef
+      Paws::CloudFront::LambdaFunctionAssociation undef
+      Paws::CloudFront::LambdaFunctionAssociations undef
       Paws::CloudFront::ListCloudFrontOriginAccessIdentities undef
       Paws::CloudFront::ListCloudFrontOriginAccessIdentitiesResult undef
       Paws::CloudFront::ListDistributions undef
@@ -3054,6 +3411,7 @@ DISTRIBUTIONS
       Paws::CloudFront::OriginSslProtocols undef
       Paws::CloudFront::Origins undef
       Paws::CloudFront::Paths undef
+      Paws::CloudFront::QueryStringCacheKeys undef
       Paws::CloudFront::Restrictions undef
       Paws::CloudFront::S3Origin undef
       Paws::CloudFront::S3OriginConfig undef
@@ -3225,11 +3583,15 @@ DISTRIBUTIONS
       Paws::CloudTrail::AddTagsResponse undef
       Paws::CloudTrail::CreateTrail undef
       Paws::CloudTrail::CreateTrailResponse undef
+      Paws::CloudTrail::DataResource undef
       Paws::CloudTrail::DeleteTrail undef
       Paws::CloudTrail::DeleteTrailResponse undef
       Paws::CloudTrail::DescribeTrails undef
       Paws::CloudTrail::DescribeTrailsResponse undef
       Paws::CloudTrail::Event undef
+      Paws::CloudTrail::EventSelector undef
+      Paws::CloudTrail::GetEventSelectors undef
+      Paws::CloudTrail::GetEventSelectorsResponse undef
       Paws::CloudTrail::GetTrailStatus undef
       Paws::CloudTrail::GetTrailStatusResponse undef
       Paws::CloudTrail::ListPublicKeys undef
@@ -3240,6 +3602,8 @@ DISTRIBUTIONS
       Paws::CloudTrail::LookupEvents undef
       Paws::CloudTrail::LookupEventsResponse undef
       Paws::CloudTrail::PublicKey undef
+      Paws::CloudTrail::PutEventSelectors undef
+      Paws::CloudTrail::PutEventSelectorsResponse undef
       Paws::CloudTrail::RemoveTags undef
       Paws::CloudTrail::RemoveTagsResponse undef
       Paws::CloudTrail::Resource undef
@@ -3255,6 +3619,7 @@ DISTRIBUTIONS
       Paws::CloudWatch undef
       Paws::CloudWatch::AlarmHistoryItem undef
       Paws::CloudWatch::Datapoint undef
+      Paws::CloudWatch::DatapointValueMap undef
       Paws::CloudWatch::DeleteAlarms undef
       Paws::CloudWatch::DescribeAlarmHistory undef
       Paws::CloudWatch::DescribeAlarmHistoryOutput undef
@@ -3340,6 +3705,8 @@ DISTRIBUTIONS
       Paws::CloudWatchLogs::GetLogEvents undef
       Paws::CloudWatchLogs::GetLogEventsResponse undef
       Paws::CloudWatchLogs::InputLogEvent undef
+      Paws::CloudWatchLogs::ListTagsLogGroup undef
+      Paws::CloudWatchLogs::ListTagsLogGroupResponse undef
       Paws::CloudWatchLogs::LogGroup undef
       Paws::CloudWatchLogs::LogStream undef
       Paws::CloudWatchLogs::MetricFilter undef
@@ -3357,11 +3724,53 @@ DISTRIBUTIONS
       Paws::CloudWatchLogs::RejectedLogEventsInfo undef
       Paws::CloudWatchLogs::SearchedLogStream undef
       Paws::CloudWatchLogs::SubscriptionFilter undef
+      Paws::CloudWatchLogs::TagLogGroup undef
+      Paws::CloudWatchLogs::Tags undef
       Paws::CloudWatchLogs::TestMetricFilter undef
       Paws::CloudWatchLogs::TestMetricFilterResponse undef
+      Paws::CloudWatchLogs::UntagLogGroup undef
+      Paws::CodeBuild undef
+      Paws::CodeBuild::BatchGetBuilds undef
+      Paws::CodeBuild::BatchGetBuildsOutput undef
+      Paws::CodeBuild::BatchGetProjects undef
+      Paws::CodeBuild::BatchGetProjectsOutput undef
+      Paws::CodeBuild::Build undef
+      Paws::CodeBuild::BuildArtifacts undef
+      Paws::CodeBuild::BuildPhase undef
+      Paws::CodeBuild::CreateProject undef
+      Paws::CodeBuild::CreateProjectOutput undef
+      Paws::CodeBuild::DeleteProject undef
+      Paws::CodeBuild::DeleteProjectOutput undef
+      Paws::CodeBuild::EnvironmentImage undef
+      Paws::CodeBuild::EnvironmentLanguage undef
+      Paws::CodeBuild::EnvironmentPlatform undef
+      Paws::CodeBuild::EnvironmentVariable undef
+      Paws::CodeBuild::ListBuilds undef
+      Paws::CodeBuild::ListBuildsForProject undef
+      Paws::CodeBuild::ListBuildsForProjectOutput undef
+      Paws::CodeBuild::ListBuildsOutput undef
+      Paws::CodeBuild::ListCuratedEnvironmentImages undef
+      Paws::CodeBuild::ListCuratedEnvironmentImagesOutput undef
+      Paws::CodeBuild::ListProjects undef
+      Paws::CodeBuild::ListProjectsOutput undef
+      Paws::CodeBuild::LogsLocation undef
+      Paws::CodeBuild::PhaseContext undef
+      Paws::CodeBuild::Project undef
+      Paws::CodeBuild::ProjectArtifacts undef
+      Paws::CodeBuild::ProjectEnvironment undef
+      Paws::CodeBuild::ProjectSource undef
+      Paws::CodeBuild::SourceAuth undef
+      Paws::CodeBuild::StartBuild undef
+      Paws::CodeBuild::StartBuildOutput undef
+      Paws::CodeBuild::StopBuild undef
+      Paws::CodeBuild::StopBuildOutput undef
+      Paws::CodeBuild::Tag undef
+      Paws::CodeBuild::UpdateProject undef
+      Paws::CodeBuild::UpdateProjectOutput undef
       Paws::CodeCommit undef
       Paws::CodeCommit::BatchGetRepositories undef
       Paws::CodeCommit::BatchGetRepositoriesOutput undef
+      Paws::CodeCommit::BlobMetadata undef
       Paws::CodeCommit::BranchInfo undef
       Paws::CodeCommit::Commit undef
       Paws::CodeCommit::CreateBranch undef
@@ -3369,10 +3778,15 @@ DISTRIBUTIONS
       Paws::CodeCommit::CreateRepositoryOutput undef
       Paws::CodeCommit::DeleteRepository undef
       Paws::CodeCommit::DeleteRepositoryOutput undef
+      Paws::CodeCommit::Difference undef
+      Paws::CodeCommit::GetBlob undef
+      Paws::CodeCommit::GetBlobOutput undef
       Paws::CodeCommit::GetBranch undef
       Paws::CodeCommit::GetBranchOutput undef
       Paws::CodeCommit::GetCommit undef
       Paws::CodeCommit::GetCommitOutput undef
+      Paws::CodeCommit::GetDifferences undef
+      Paws::CodeCommit::GetDifferencesOutput undef
       Paws::CodeCommit::GetRepository undef
       Paws::CodeCommit::GetRepositoryOutput undef
       Paws::CodeCommit::GetRepositoryTriggers undef
@@ -3395,7 +3809,10 @@ DISTRIBUTIONS
       Paws::CodeCommit::UserInfo undef
       Paws::CodeDeploy undef
       Paws::CodeDeploy::AddTagsToOnPremisesInstances undef
+      Paws::CodeDeploy::Alarm undef
+      Paws::CodeDeploy::AlarmConfiguration undef
       Paws::CodeDeploy::ApplicationInfo undef
+      Paws::CodeDeploy::AutoRollbackConfiguration undef
       Paws::CodeDeploy::AutoScalingGroup undef
       Paws::CodeDeploy::BatchGetApplicationRevisions undef
       Paws::CodeDeploy::BatchGetApplicationRevisionsOutput undef
@@ -3409,6 +3826,9 @@ DISTRIBUTIONS
       Paws::CodeDeploy::BatchGetDeploymentsOutput undef
       Paws::CodeDeploy::BatchGetOnPremisesInstances undef
       Paws::CodeDeploy::BatchGetOnPremisesInstancesOutput undef
+      Paws::CodeDeploy::BlueGreenDeploymentConfiguration undef
+      Paws::CodeDeploy::BlueInstanceTerminationOption undef
+      Paws::CodeDeploy::ContinueDeployment undef
       Paws::CodeDeploy::CreateApplication undef
       Paws::CodeDeploy::CreateApplicationOutput undef
       Paws::CodeDeploy::CreateDeployment undef
@@ -3425,9 +3845,12 @@ DISTRIBUTIONS
       Paws::CodeDeploy::DeploymentGroupInfo undef
       Paws::CodeDeploy::DeploymentInfo undef
       Paws::CodeDeploy::DeploymentOverview undef
+      Paws::CodeDeploy::DeploymentReadyOption undef
+      Paws::CodeDeploy::DeploymentStyle undef
       Paws::CodeDeploy::DeregisterOnPremisesInstance undef
       Paws::CodeDeploy::Diagnostics undef
       Paws::CodeDeploy::EC2TagFilter undef
+      Paws::CodeDeploy::ELBInfo undef
       Paws::CodeDeploy::ErrorInformation undef
       Paws::CodeDeploy::GenericRevisionInfo undef
       Paws::CodeDeploy::GetApplication undef
@@ -3445,6 +3868,7 @@ DISTRIBUTIONS
       Paws::CodeDeploy::GetOnPremisesInstance undef
       Paws::CodeDeploy::GetOnPremisesInstanceOutput undef
       Paws::CodeDeploy::GitHubLocation undef
+      Paws::CodeDeploy::GreenFleetProvisioningOption undef
       Paws::CodeDeploy::InstanceInfo undef
       Paws::CodeDeploy::InstanceSummary undef
       Paws::CodeDeploy::LifecycleEvent undef
@@ -3462,17 +3886,21 @@ DISTRIBUTIONS
       Paws::CodeDeploy::ListDeploymentsOutput undef
       Paws::CodeDeploy::ListOnPremisesInstances undef
       Paws::CodeDeploy::ListOnPremisesInstancesOutput undef
+      Paws::CodeDeploy::LoadBalancerInfo undef
       Paws::CodeDeploy::MinimumHealthyHosts undef
       Paws::CodeDeploy::RegisterApplicationRevision undef
       Paws::CodeDeploy::RegisterOnPremisesInstance undef
       Paws::CodeDeploy::RemoveTagsFromOnPremisesInstances undef
       Paws::CodeDeploy::RevisionInfo undef
       Paws::CodeDeploy::RevisionLocation undef
+      Paws::CodeDeploy::RollbackInfo undef
       Paws::CodeDeploy::S3Location undef
+      Paws::CodeDeploy::SkipWaitTimeForInstanceTermination undef
       Paws::CodeDeploy::StopDeployment undef
       Paws::CodeDeploy::StopDeploymentOutput undef
       Paws::CodeDeploy::Tag undef
       Paws::CodeDeploy::TagFilter undef
+      Paws::CodeDeploy::TargetInstances undef
       Paws::CodeDeploy::TimeRange undef
       Paws::CodeDeploy::TriggerConfig undef
       Paws::CodeDeploy::UpdateApplication undef
@@ -3499,6 +3927,7 @@ DISTRIBUTIONS
       Paws::CodePipeline::Artifact undef
       Paws::CodePipeline::ArtifactDetails undef
       Paws::CodePipeline::ArtifactLocation undef
+      Paws::CodePipeline::ArtifactRevision undef
       Paws::CodePipeline::ArtifactStore undef
       Paws::CodePipeline::BlockerDeclaration undef
       Paws::CodePipeline::CreateCustomActionType undef
@@ -3517,6 +3946,8 @@ DISTRIBUTIONS
       Paws::CodePipeline::GetJobDetails undef
       Paws::CodePipeline::GetJobDetailsOutput undef
       Paws::CodePipeline::GetPipeline undef
+      Paws::CodePipeline::GetPipelineExecution undef
+      Paws::CodePipeline::GetPipelineExecutionOutput undef
       Paws::CodePipeline::GetPipelineOutput undef
       Paws::CodePipeline::GetPipelineState undef
       Paws::CodePipeline::GetPipelineStateOutput undef
@@ -3533,6 +3964,7 @@ DISTRIBUTIONS
       Paws::CodePipeline::OutputArtifact undef
       Paws::CodePipeline::PipelineContext undef
       Paws::CodePipeline::PipelineDeclaration undef
+      Paws::CodePipeline::PipelineExecution undef
       Paws::CodePipeline::PipelineSummary undef
       Paws::CodePipeline::PollForJobs undef
       Paws::CodePipeline::PollForJobsOutput undef
@@ -3592,9 +4024,13 @@ DISTRIBUTIONS
       Paws::CognitoIdentity::LoginsMap undef
       Paws::CognitoIdentity::LookupDeveloperIdentity undef
       Paws::CognitoIdentity::LookupDeveloperIdentityResponse undef
+      Paws::CognitoIdentity::MappingRule undef
       Paws::CognitoIdentity::MergeDeveloperIdentities undef
       Paws::CognitoIdentity::MergeDeveloperIdentitiesResponse undef
+      Paws::CognitoIdentity::RoleMapping undef
+      Paws::CognitoIdentity::RoleMappingMap undef
       Paws::CognitoIdentity::RolesMap undef
+      Paws::CognitoIdentity::RulesConfigurationType undef
       Paws::CognitoIdentity::SetIdentityPoolRoles undef
       Paws::CognitoIdentity::UnlinkDeveloperIdentity undef
       Paws::CognitoIdentity::UnlinkIdentity undef
@@ -3603,8 +4039,12 @@ DISTRIBUTIONS
       Paws::CognitoIdp undef
       Paws::CognitoIdp::AddCustomAttributes undef
       Paws::CognitoIdp::AddCustomAttributesResponse undef
+      Paws::CognitoIdp::AdminAddUserToGroup undef
       Paws::CognitoIdp::AdminConfirmSignUp undef
       Paws::CognitoIdp::AdminConfirmSignUpResponse undef
+      Paws::CognitoIdp::AdminCreateUser undef
+      Paws::CognitoIdp::AdminCreateUserConfigType undef
+      Paws::CognitoIdp::AdminCreateUserResponse undef
       Paws::CognitoIdp::AdminDeleteUser undef
       Paws::CognitoIdp::AdminDeleteUserAttributes undef
       Paws::CognitoIdp::AdminDeleteUserAttributesResponse undef
@@ -3621,6 +4061,9 @@ DISTRIBUTIONS
       Paws::CognitoIdp::AdminInitiateAuthResponse undef
       Paws::CognitoIdp::AdminListDevices undef
       Paws::CognitoIdp::AdminListDevicesResponse undef
+      Paws::CognitoIdp::AdminListGroupsForUser undef
+      Paws::CognitoIdp::AdminListGroupsForUserResponse undef
+      Paws::CognitoIdp::AdminRemoveUserFromGroup undef
       Paws::CognitoIdp::AdminResetUserPassword undef
       Paws::CognitoIdp::AdminResetUserPasswordResponse undef
       Paws::CognitoIdp::AdminRespondToAuthChallenge undef
@@ -3648,15 +4091,22 @@ DISTRIBUTIONS
       Paws::CognitoIdp::ConfirmForgotPasswordResponse undef
       Paws::CognitoIdp::ConfirmSignUp undef
       Paws::CognitoIdp::ConfirmSignUpResponse undef
+      Paws::CognitoIdp::CreateGroup undef
+      Paws::CognitoIdp::CreateGroupResponse undef
+      Paws::CognitoIdp::CreateUserImportJob undef
+      Paws::CognitoIdp::CreateUserImportJobResponse undef
       Paws::CognitoIdp::CreateUserPool undef
       Paws::CognitoIdp::CreateUserPoolClient undef
       Paws::CognitoIdp::CreateUserPoolClientResponse undef
       Paws::CognitoIdp::CreateUserPoolResponse undef
+      Paws::CognitoIdp::DeleteGroup undef
       Paws::CognitoIdp::DeleteUser undef
       Paws::CognitoIdp::DeleteUserAttributes undef
       Paws::CognitoIdp::DeleteUserAttributesResponse undef
       Paws::CognitoIdp::DeleteUserPool undef
       Paws::CognitoIdp::DeleteUserPoolClient undef
+      Paws::CognitoIdp::DescribeUserImportJob undef
+      Paws::CognitoIdp::DescribeUserImportJobResponse undef
       Paws::CognitoIdp::DescribeUserPool undef
       Paws::CognitoIdp::DescribeUserPoolClient undef
       Paws::CognitoIdp::DescribeUserPoolClientResponse undef
@@ -3668,26 +4118,38 @@ DISTRIBUTIONS
       Paws::CognitoIdp::ForgetDevice undef
       Paws::CognitoIdp::ForgotPassword undef
       Paws::CognitoIdp::ForgotPasswordResponse undef
+      Paws::CognitoIdp::GetCSVHeader undef
+      Paws::CognitoIdp::GetCSVHeaderResponse undef
       Paws::CognitoIdp::GetDevice undef
       Paws::CognitoIdp::GetDeviceResponse undef
+      Paws::CognitoIdp::GetGroup undef
+      Paws::CognitoIdp::GetGroupResponse undef
       Paws::CognitoIdp::GetUser undef
       Paws::CognitoIdp::GetUserAttributeVerificationCode undef
       Paws::CognitoIdp::GetUserAttributeVerificationCodeResponse undef
       Paws::CognitoIdp::GetUserResponse undef
       Paws::CognitoIdp::GlobalSignOut undef
       Paws::CognitoIdp::GlobalSignOutResponse undef
+      Paws::CognitoIdp::GroupType undef
       Paws::CognitoIdp::InitiateAuth undef
       Paws::CognitoIdp::InitiateAuthResponse undef
       Paws::CognitoIdp::LambdaConfigType undef
       Paws::CognitoIdp::ListDevices undef
       Paws::CognitoIdp::ListDevicesResponse undef
+      Paws::CognitoIdp::ListGroups undef
+      Paws::CognitoIdp::ListGroupsResponse undef
+      Paws::CognitoIdp::ListUserImportJobs undef
+      Paws::CognitoIdp::ListUserImportJobsResponse undef
       Paws::CognitoIdp::ListUserPoolClients undef
       Paws::CognitoIdp::ListUserPoolClientsResponse undef
       Paws::CognitoIdp::ListUserPools undef
       Paws::CognitoIdp::ListUserPoolsResponse undef
       Paws::CognitoIdp::ListUsers undef
+      Paws::CognitoIdp::ListUsersInGroup undef
+      Paws::CognitoIdp::ListUsersInGroupResponse undef
       Paws::CognitoIdp::ListUsersResponse undef
       Paws::CognitoIdp::MFAOptionType undef
+      Paws::CognitoIdp::MessageTemplateType undef
       Paws::CognitoIdp::NewDeviceMetadataType undef
       Paws::CognitoIdp::NumberAttributeConstraintsType undef
       Paws::CognitoIdp::PasswordPolicyType undef
@@ -3701,19 +4163,27 @@ DISTRIBUTIONS
       Paws::CognitoIdp::SignUp undef
       Paws::CognitoIdp::SignUpResponse undef
       Paws::CognitoIdp::SmsConfigurationType undef
+      Paws::CognitoIdp::StartUserImportJob undef
+      Paws::CognitoIdp::StartUserImportJobResponse undef
+      Paws::CognitoIdp::StopUserImportJob undef
+      Paws::CognitoIdp::StopUserImportJobResponse undef
       Paws::CognitoIdp::StringAttributeConstraintsType undef
       Paws::CognitoIdp::UpdateDeviceStatus undef
       Paws::CognitoIdp::UpdateDeviceStatusResponse undef
+      Paws::CognitoIdp::UpdateGroup undef
+      Paws::CognitoIdp::UpdateGroupResponse undef
       Paws::CognitoIdp::UpdateUserAttributes undef
       Paws::CognitoIdp::UpdateUserAttributesResponse undef
       Paws::CognitoIdp::UpdateUserPool undef
       Paws::CognitoIdp::UpdateUserPoolClient undef
       Paws::CognitoIdp::UpdateUserPoolClientResponse undef
       Paws::CognitoIdp::UpdateUserPoolResponse undef
+      Paws::CognitoIdp::UserImportJobType undef
       Paws::CognitoIdp::UserPoolClientDescription undef
       Paws::CognitoIdp::UserPoolClientType undef
       Paws::CognitoIdp::UserPoolDescriptionType undef
       Paws::CognitoIdp::UserPoolPolicyType undef
+      Paws::CognitoIdp::UserPoolTagsType undef
       Paws::CognitoIdp::UserPoolType undef
       Paws::CognitoIdp::UserType undef
       Paws::CognitoIdp::VerifyUserAttribute undef
@@ -3903,6 +4373,8 @@ DISTRIBUTIONS
       Paws::DMS::ModifyReplicationInstanceResponse undef
       Paws::DMS::ModifyReplicationSubnetGroup undef
       Paws::DMS::ModifyReplicationSubnetGroupResponse undef
+      Paws::DMS::ModifyReplicationTask undef
+      Paws::DMS::ModifyReplicationTaskResponse undef
       Paws::DMS::OrderableReplicationInstance undef
       Paws::DMS::RefreshSchemas undef
       Paws::DMS::RefreshSchemasResponse undef
@@ -3931,6 +4403,8 @@ DISTRIBUTIONS
       Paws::DS::AddTagsToResource undef
       Paws::DS::AddTagsToResourceResult undef
       Paws::DS::Attribute undef
+      Paws::DS::CancelSchemaExtension undef
+      Paws::DS::CancelSchemaExtensionResult undef
       Paws::DS::Computer undef
       Paws::DS::ConditionalForwarder undef
       Paws::DS::ConnectDirectory undef
@@ -3992,6 +4466,8 @@ DISTRIBUTIONS
       Paws::DS::IpRouteInfo undef
       Paws::DS::ListIpRoutes undef
       Paws::DS::ListIpRoutesResult undef
+      Paws::DS::ListSchemaExtensions undef
+      Paws::DS::ListSchemaExtensionsResult undef
       Paws::DS::ListTagsForResource undef
       Paws::DS::ListTagsForResourceResult undef
       Paws::DS::RadiusSettings undef
@@ -4003,8 +4479,11 @@ DISTRIBUTIONS
       Paws::DS::RemoveTagsFromResourceResult undef
       Paws::DS::RestoreFromSnapshot undef
       Paws::DS::RestoreFromSnapshotResult undef
+      Paws::DS::SchemaExtensionInfo undef
       Paws::DS::Snapshot undef
       Paws::DS::SnapshotLimits undef
+      Paws::DS::StartSchemaExtension undef
+      Paws::DS::StartSchemaExtensionResult undef
       Paws::DS::Tag undef
       Paws::DS::Trust undef
       Paws::DS::UpdateConditionalForwarder undef
@@ -4193,6 +4672,7 @@ DISTRIBUTIONS
       Paws::DirectConnect::AllocateConnectionOnInterconnect undef
       Paws::DirectConnect::AllocatePrivateVirtualInterface undef
       Paws::DirectConnect::AllocatePublicVirtualInterface undef
+      Paws::DirectConnect::BGPPeer undef
       Paws::DirectConnect::ConfirmConnection undef
       Paws::DirectConnect::ConfirmConnectionResponse undef
       Paws::DirectConnect::ConfirmPrivateVirtualInterface undef
@@ -4201,10 +4681,14 @@ DISTRIBUTIONS
       Paws::DirectConnect::ConfirmPublicVirtualInterfaceResponse undef
       Paws::DirectConnect::Connection undef
       Paws::DirectConnect::Connections undef
+      Paws::DirectConnect::CreateBGPPeer undef
+      Paws::DirectConnect::CreateBGPPeerResponse undef
       Paws::DirectConnect::CreateConnection undef
       Paws::DirectConnect::CreateInterconnect undef
       Paws::DirectConnect::CreatePrivateVirtualInterface undef
       Paws::DirectConnect::CreatePublicVirtualInterface undef
+      Paws::DirectConnect::DeleteBGPPeer undef
+      Paws::DirectConnect::DeleteBGPPeerResponse undef
       Paws::DirectConnect::DeleteConnection undef
       Paws::DirectConnect::DeleteInterconnect undef
       Paws::DirectConnect::DeleteInterconnectResponse undef
@@ -4218,6 +4702,8 @@ DISTRIBUTIONS
       Paws::DirectConnect::DescribeInterconnectLoaResponse undef
       Paws::DirectConnect::DescribeInterconnects undef
       Paws::DirectConnect::DescribeLocations undef
+      Paws::DirectConnect::DescribeTags undef
+      Paws::DirectConnect::DescribeTagsResponse undef
       Paws::DirectConnect::DescribeVirtualGateways undef
       Paws::DirectConnect::DescribeVirtualInterfaces undef
       Paws::DirectConnect::Interconnect undef
@@ -4225,11 +4711,18 @@ DISTRIBUTIONS
       Paws::DirectConnect::Loa undef
       Paws::DirectConnect::Location undef
       Paws::DirectConnect::Locations undef
+      Paws::DirectConnect::NewBGPPeer undef
       Paws::DirectConnect::NewPrivateVirtualInterface undef
       Paws::DirectConnect::NewPrivateVirtualInterfaceAllocation undef
       Paws::DirectConnect::NewPublicVirtualInterface undef
       Paws::DirectConnect::NewPublicVirtualInterfaceAllocation undef
+      Paws::DirectConnect::ResourceTag undef
       Paws::DirectConnect::RouteFilterPrefix undef
+      Paws::DirectConnect::Tag undef
+      Paws::DirectConnect::TagResource undef
+      Paws::DirectConnect::TagResourceResponse undef
+      Paws::DirectConnect::UntagResource undef
+      Paws::DirectConnect::UntagResourceResponse undef
       Paws::DirectConnect::VirtualGateway undef
       Paws::DirectConnect::VirtualGateways undef
       Paws::DirectConnect::VirtualInterface undef
@@ -4238,10 +4731,18 @@ DISTRIBUTIONS
       Paws::Discovery::AgentConfigurationStatus undef
       Paws::Discovery::AgentInfo undef
       Paws::Discovery::AgentNetworkInfo undef
+      Paws::Discovery::AssociateConfigurationItemsToApplication undef
+      Paws::Discovery::AssociateConfigurationItemsToApplicationResponse undef
       Paws::Discovery::Configuration undef
       Paws::Discovery::ConfigurationTag undef
+      Paws::Discovery::CreateApplication undef
+      Paws::Discovery::CreateApplicationResponse undef
       Paws::Discovery::CreateTags undef
       Paws::Discovery::CreateTagsResponse undef
+      Paws::Discovery::CustomerAgentInfo undef
+      Paws::Discovery::CustomerConnectorInfo undef
+      Paws::Discovery::DeleteApplications undef
+      Paws::Discovery::DeleteApplicationsResponse undef
       Paws::Discovery::DeleteTags undef
       Paws::Discovery::DeleteTagsResponse undef
       Paws::Discovery::DescribeAgents undef
@@ -4253,18 +4754,28 @@ DISTRIBUTIONS
       Paws::Discovery::DescribeExportConfigurationsResponse undef
       Paws::Discovery::DescribeTags undef
       Paws::Discovery::DescribeTagsResponse undef
+      Paws::Discovery::DisassociateConfigurationItemsFromApplication undef
+      Paws::Discovery::DisassociateConfigurationItemsFromApplicationResponse undef
       Paws::Discovery::ExportConfigurations undef
       Paws::Discovery::ExportConfigurationsResponse undef
       Paws::Discovery::ExportInfo undef
       Paws::Discovery::Filter undef
+      Paws::Discovery::GetDiscoverySummary undef
+      Paws::Discovery::GetDiscoverySummaryResponse undef
       Paws::Discovery::ListConfigurations undef
       Paws::Discovery::ListConfigurationsResponse undef
+      Paws::Discovery::ListServerNeighbors undef
+      Paws::Discovery::ListServerNeighborsResponse undef
+      Paws::Discovery::NeighborConnectionDetail undef
+      Paws::Discovery::OrderByElement undef
       Paws::Discovery::StartDataCollectionByAgentIds undef
       Paws::Discovery::StartDataCollectionByAgentIdsResponse undef
       Paws::Discovery::StopDataCollectionByAgentIds undef
       Paws::Discovery::StopDataCollectionByAgentIdsResponse undef
       Paws::Discovery::Tag undef
       Paws::Discovery::TagFilter undef
+      Paws::Discovery::UpdateApplication undef
+      Paws::Discovery::UpdateApplicationResponse undef
       Paws::DynamoDB undef
       Paws::DynamoDB::AttributeDefinition undef
       Paws::DynamoDB::AttributeMap undef
@@ -4313,6 +4824,8 @@ DISTRIBUTIONS
       Paws::DynamoDB::KeysAndAttributes undef
       Paws::DynamoDB::ListTables undef
       Paws::DynamoDB::ListTablesOutput undef
+      Paws::DynamoDB::ListTagsOfResource undef
+      Paws::DynamoDB::ListTagsOfResourceOutput undef
       Paws::DynamoDB::LocalSecondaryIndex undef
       Paws::DynamoDB::LocalSecondaryIndexDescription undef
       Paws::DynamoDB::MapAttributeValue undef
@@ -4330,6 +4843,9 @@ DISTRIBUTIONS
       Paws::DynamoDB::SecondaryIndexesCapacityMap undef
       Paws::DynamoDB::StreamSpecification undef
       Paws::DynamoDB::TableDescription undef
+      Paws::DynamoDB::Tag undef
+      Paws::DynamoDB::TagResource undef
+      Paws::DynamoDB::UntagResource undef
       Paws::DynamoDB::UpdateGlobalSecondaryIndexAction undef
       Paws::DynamoDB::UpdateItem undef
       Paws::DynamoDB::UpdateItemOutput undef
@@ -4356,6 +4872,8 @@ DISTRIBUTIONS
       Paws::DynamoDBStreams::StreamDescription undef
       Paws::DynamoDBStreams::StreamRecord undef
       Paws::EC2 undef
+      Paws::EC2::AcceptReservedInstancesExchangeQuote undef
+      Paws::EC2::AcceptReservedInstancesExchangeQuoteResult undef
       Paws::EC2::AcceptVpcPeeringConnection undef
       Paws::EC2::AcceptVpcPeeringConnectionResult undef
       Paws::EC2::AccountAttribute undef
@@ -4366,12 +4884,18 @@ DISTRIBUTIONS
       Paws::EC2::AllocateAddressResult undef
       Paws::EC2::AllocateHosts undef
       Paws::EC2::AllocateHostsResult undef
+      Paws::EC2::AssignIpv6Addresses undef
+      Paws::EC2::AssignIpv6AddressesResult undef
       Paws::EC2::AssignPrivateIpAddresses undef
       Paws::EC2::AssociateAddress undef
       Paws::EC2::AssociateAddressResult undef
       Paws::EC2::AssociateDhcpOptions undef
       Paws::EC2::AssociateRouteTable undef
       Paws::EC2::AssociateRouteTableResult undef
+      Paws::EC2::AssociateSubnetCidrBlock undef
+      Paws::EC2::AssociateSubnetCidrBlockResult undef
+      Paws::EC2::AssociateVpcCidrBlock undef
+      Paws::EC2::AssociateVpcCidrBlockResult undef
       Paws::EC2::AttachClassicLinkVpc undef
       Paws::EC2::AttachClassicLinkVpcResult undef
       Paws::EC2::AttachInternetGateway undef
@@ -4423,6 +4947,8 @@ DISTRIBUTIONS
       Paws::EC2::CreateCustomerGatewayResult undef
       Paws::EC2::CreateDhcpOptions undef
       Paws::EC2::CreateDhcpOptionsResult undef
+      Paws::EC2::CreateEgressOnlyInternetGateway undef
+      Paws::EC2::CreateEgressOnlyInternetGatewayResult undef
       Paws::EC2::CreateFlowLogs undef
       Paws::EC2::CreateFlowLogsResult undef
       Paws::EC2::CreateImage undef
@@ -4471,6 +4997,8 @@ DISTRIBUTIONS
       Paws::EC2::CustomerGateway undef
       Paws::EC2::DeleteCustomerGateway undef
       Paws::EC2::DeleteDhcpOptions undef
+      Paws::EC2::DeleteEgressOnlyInternetGateway undef
+      Paws::EC2::DeleteEgressOnlyInternetGatewayResult undef
       Paws::EC2::DeleteFlowLogs undef
       Paws::EC2::DeleteFlowLogsResult undef
       Paws::EC2::DeleteInternetGateway undef
@@ -4514,6 +5042,8 @@ DISTRIBUTIONS
       Paws::EC2::DescribeCustomerGatewaysResult undef
       Paws::EC2::DescribeDhcpOptions undef
       Paws::EC2::DescribeDhcpOptionsResult undef
+      Paws::EC2::DescribeEgressOnlyInternetGateways undef
+      Paws::EC2::DescribeEgressOnlyInternetGatewaysResult undef
       Paws::EC2::DescribeExportTasks undef
       Paws::EC2::DescribeExportTasksResult undef
       Paws::EC2::DescribeFlowLogs undef
@@ -4639,6 +5169,10 @@ DISTRIBUTIONS
       Paws::EC2::DisableVpcClassicLinkResult undef
       Paws::EC2::DisassociateAddress undef
       Paws::EC2::DisassociateRouteTable undef
+      Paws::EC2::DisassociateSubnetCidrBlock undef
+      Paws::EC2::DisassociateSubnetCidrBlockResult undef
+      Paws::EC2::DisassociateVpcCidrBlock undef
+      Paws::EC2::DisassociateVpcCidrBlockResult undef
       Paws::EC2::DiskImage undef
       Paws::EC2::DiskImageDescription undef
       Paws::EC2::DiskImageDetail undef
@@ -4646,6 +5180,7 @@ DISTRIBUTIONS
       Paws::EC2::EbsBlockDevice undef
       Paws::EC2::EbsInstanceBlockDevice undef
       Paws::EC2::EbsInstanceBlockDeviceSpecification undef
+      Paws::EC2::EgressOnlyInternetGateway undef
       Paws::EC2::EnableVgwRoutePropagation undef
       Paws::EC2::EnableVolumeIO undef
       Paws::EC2::EnableVpcClassicLink undef
@@ -4666,6 +5201,8 @@ DISTRIBUTIONS
       Paws::EC2::GetHostReservationPurchasePreviewResult undef
       Paws::EC2::GetPasswordData undef
       Paws::EC2::GetPasswordDataResult undef
+      Paws::EC2::GetReservedInstancesExchangeQuote undef
+      Paws::EC2::GetReservedInstancesExchangeQuoteResult undef
       Paws::EC2::GroupIdentifier undef
       Paws::EC2::HistoryRecord undef
       Paws::EC2::Host undef
@@ -4703,6 +5240,7 @@ DISTRIBUTIONS
       Paws::EC2::InstanceCapacity undef
       Paws::EC2::InstanceCount undef
       Paws::EC2::InstanceExportDetails undef
+      Paws::EC2::InstanceIpv6Address undef
       Paws::EC2::InstanceMonitoring undef
       Paws::EC2::InstanceNetworkInterface undef
       Paws::EC2::InstanceNetworkInterfaceAssociation undef
@@ -4719,6 +5257,8 @@ DISTRIBUTIONS
       Paws::EC2::InternetGatewayAttachment undef
       Paws::EC2::IpPermission undef
       Paws::EC2::IpRange undef
+      Paws::EC2::Ipv6CidrBlock undef
+      Paws::EC2::Ipv6Range undef
       Paws::EC2::KeyPair undef
       Paws::EC2::KeyPairInfo undef
       Paws::EC2::LaunchPermission undef
@@ -4760,6 +5300,7 @@ DISTRIBUTIONS
       Paws::EC2::NetworkInterfaceAssociation undef
       Paws::EC2::NetworkInterfaceAttachment undef
       Paws::EC2::NetworkInterfaceAttachmentChanges undef
+      Paws::EC2::NetworkInterfaceIpv6Address undef
       Paws::EC2::NetworkInterfacePrivateIpAddress undef
       Paws::EC2::NewDhcpConfiguration undef
       Paws::EC2::PeeringConnectionOptions undef
@@ -4807,7 +5348,9 @@ DISTRIBUTIONS
       Paws::EC2::RequestSpotInstancesResult undef
       Paws::EC2::RequestSpotLaunchSpecification undef
       Paws::EC2::Reservation undef
+      Paws::EC2::ReservationValue undef
       Paws::EC2::ReservedInstanceLimitPrice undef
+      Paws::EC2::ReservedInstanceReservationValue undef
       Paws::EC2::ReservedInstances undef
       Paws::EC2::ReservedInstancesConfiguration undef
       Paws::EC2::ReservedInstancesId undef
@@ -4838,6 +5381,7 @@ DISTRIBUTIONS
       Paws::EC2::ScheduledInstancesBlockDeviceMapping undef
       Paws::EC2::ScheduledInstancesEbs undef
       Paws::EC2::ScheduledInstancesIamInstanceProfile undef
+      Paws::EC2::ScheduledInstancesIpv6Address undef
       Paws::EC2::ScheduledInstancesLaunchSpecification undef
       Paws::EC2::ScheduledInstancesMonitoring undef
       Paws::EC2::ScheduledInstancesNetworkInterface undef
@@ -4870,10 +5414,17 @@ DISTRIBUTIONS
       Paws::EC2::StopInstancesResult undef
       Paws::EC2::Storage undef
       Paws::EC2::Subnet undef
+      Paws::EC2::SubnetCidrBlockState undef
+      Paws::EC2::SubnetIpv6CidrBlockAssociation undef
       Paws::EC2::Tag undef
       Paws::EC2::TagDescription undef
+      Paws::EC2::TargetConfiguration undef
+      Paws::EC2::TargetConfigurationRequest undef
+      Paws::EC2::TargetReservationValue undef
       Paws::EC2::TerminateInstances undef
       Paws::EC2::TerminateInstancesResult undef
+      Paws::EC2::UnassignIpv6Addresses undef
+      Paws::EC2::UnassignIpv6AddressesResult undef
       Paws::EC2::UnassignPrivateIpAddresses undef
       Paws::EC2::UnmonitorInstances undef
       Paws::EC2::UnmonitorInstancesResult undef
@@ -4894,8 +5445,10 @@ DISTRIBUTIONS
       Paws::EC2::VolumeStatusItem undef
       Paws::EC2::Vpc undef
       Paws::EC2::VpcAttachment undef
+      Paws::EC2::VpcCidrBlockState undef
       Paws::EC2::VpcClassicLink undef
       Paws::EC2::VpcEndpoint undef
+      Paws::EC2::VpcIpv6CidrBlockAssociation undef
       Paws::EC2::VpcPeeringConnection undef
       Paws::EC2::VpcPeeringConnectionOptionsDescription undef
       Paws::EC2::VpcPeeringConnectionStateReason undef
@@ -4921,6 +5474,9 @@ DISTRIBUTIONS
       Paws::ECR::DeleteRepositoryPolicy undef
       Paws::ECR::DeleteRepositoryPolicyResponse undef
       Paws::ECR::DeleteRepositoryResponse undef
+      Paws::ECR::DescribeImages undef
+      Paws::ECR::DescribeImagesFilter undef
+      Paws::ECR::DescribeImagesResponse undef
       Paws::ECR::DescribeRepositories undef
       Paws::ECR::DescribeRepositoriesResponse undef
       Paws::ECR::GetAuthorizationToken undef
@@ -4930,6 +5486,7 @@ DISTRIBUTIONS
       Paws::ECR::GetRepositoryPolicy undef
       Paws::ECR::GetRepositoryPolicyResponse undef
       Paws::ECR::Image undef
+      Paws::ECR::ImageDetail undef
       Paws::ECR::ImageFailure undef
       Paws::ECR::ImageIdentifier undef
       Paws::ECR::InitiateLayerUpload undef
@@ -4957,6 +5514,8 @@ DISTRIBUTIONS
       Paws::ECS::CreateClusterResponse undef
       Paws::ECS::CreateService undef
       Paws::ECS::CreateServiceResponse undef
+      Paws::ECS::DeleteAttributes undef
+      Paws::ECS::DeleteAttributesResponse undef
       Paws::ECS::DeleteCluster undef
       Paws::ECS::DeleteClusterResponse undef
       Paws::ECS::DeleteService undef
@@ -4984,6 +5543,8 @@ DISTRIBUTIONS
       Paws::ECS::HostEntry undef
       Paws::ECS::HostVolumeProperties undef
       Paws::ECS::KeyValuePair undef
+      Paws::ECS::ListAttributes undef
+      Paws::ECS::ListAttributesResponse undef
       Paws::ECS::ListClusters undef
       Paws::ECS::ListClustersResponse undef
       Paws::ECS::ListContainerInstances undef
@@ -5001,7 +5562,11 @@ DISTRIBUTIONS
       Paws::ECS::LogConfigurationOptionsMap undef
       Paws::ECS::MountPoint undef
       Paws::ECS::NetworkBinding undef
+      Paws::ECS::PlacementConstraint undef
+      Paws::ECS::PlacementStrategy undef
       Paws::ECS::PortMapping undef
+      Paws::ECS::PutAttributes undef
+      Paws::ECS::PutAttributesResponse undef
       Paws::ECS::RegisterContainerInstance undef
       Paws::ECS::RegisterContainerInstanceResponse undef
       Paws::ECS::RegisterTaskDefinition undef
@@ -5021,10 +5586,13 @@ DISTRIBUTIONS
       Paws::ECS::SubmitTaskStateChangeResponse undef
       Paws::ECS::Task undef
       Paws::ECS::TaskDefinition undef
+      Paws::ECS::TaskDefinitionPlacementConstraint undef
       Paws::ECS::TaskOverride undef
       Paws::ECS::Ulimit undef
       Paws::ECS::UpdateContainerAgent undef
       Paws::ECS::UpdateContainerAgentResponse undef
+      Paws::ECS::UpdateContainerInstancesState undef
+      Paws::ECS::UpdateContainerInstancesStateResponse undef
       Paws::ECS::UpdateService undef
       Paws::ECS::UpdateServiceResponse undef
       Paws::ECS::VersionInfo undef
@@ -5197,6 +5765,8 @@ DISTRIBUTIONS
       Paws::ELBv2::Rule undef
       Paws::ELBv2::RuleCondition undef
       Paws::ELBv2::RulePriorityPair undef
+      Paws::ELBv2::SetIpAddressType undef
+      Paws::ELBv2::SetIpAddressTypeOutput undef
       Paws::ELBv2::SetRulePriorities undef
       Paws::ELBv2::SetRulePrioritiesOutput undef
       Paws::ELBv2::SetSecurityGroups undef
@@ -5219,8 +5789,16 @@ DISTRIBUTIONS
       Paws::EMR::AddTags undef
       Paws::EMR::AddTagsOutput undef
       Paws::EMR::Application undef
+      Paws::EMR::AutoScalingPolicy undef
+      Paws::EMR::AutoScalingPolicyDescription undef
+      Paws::EMR::AutoScalingPolicyStateChangeReason undef
+      Paws::EMR::AutoScalingPolicyStatus undef
       Paws::EMR::BootstrapActionConfig undef
       Paws::EMR::BootstrapActionDetail undef
+      Paws::EMR::CancelSteps undef
+      Paws::EMR::CancelStepsInfo undef
+      Paws::EMR::CancelStepsOutput undef
+      Paws::EMR::CloudWatchAlarmDefinition undef
       Paws::EMR::Cluster undef
       Paws::EMR::ClusterStateChangeReason undef
       Paws::EMR::ClusterStatus undef
@@ -5228,10 +5806,16 @@ DISTRIBUTIONS
       Paws::EMR::ClusterTimeline undef
       Paws::EMR::Command undef
       Paws::EMR::Configuration undef
+      Paws::EMR::CreateSecurityConfiguration undef
+      Paws::EMR::CreateSecurityConfigurationOutput undef
+      Paws::EMR::DeleteSecurityConfiguration undef
+      Paws::EMR::DeleteSecurityConfigurationOutput undef
       Paws::EMR::DescribeCluster undef
       Paws::EMR::DescribeClusterOutput undef
       Paws::EMR::DescribeJobFlows undef
       Paws::EMR::DescribeJobFlowsOutput undef
+      Paws::EMR::DescribeSecurityConfiguration undef
+      Paws::EMR::DescribeSecurityConfigurationOutput undef
       Paws::EMR::DescribeStep undef
       Paws::EMR::DescribeStepOutput undef
       Paws::EMR::EbsBlockDevice undef
@@ -5267,18 +5851,31 @@ DISTRIBUTIONS
       Paws::EMR::ListInstanceGroupsOutput undef
       Paws::EMR::ListInstances undef
       Paws::EMR::ListInstancesOutput undef
+      Paws::EMR::ListSecurityConfigurations undef
+      Paws::EMR::ListSecurityConfigurationsOutput undef
       Paws::EMR::ListSteps undef
       Paws::EMR::ListStepsOutput undef
+      Paws::EMR::MetricDimension undef
       Paws::EMR::ModifyInstanceGroups undef
       Paws::EMR::PlacementType undef
+      Paws::EMR::PutAutoScalingPolicy undef
+      Paws::EMR::PutAutoScalingPolicyOutput undef
+      Paws::EMR::RemoveAutoScalingPolicy undef
+      Paws::EMR::RemoveAutoScalingPolicyOutput undef
       Paws::EMR::RemoveTags undef
       Paws::EMR::RemoveTagsOutput undef
       Paws::EMR::RunJobFlow undef
       Paws::EMR::RunJobFlowOutput undef
+      Paws::EMR::ScalingAction undef
+      Paws::EMR::ScalingConstraints undef
+      Paws::EMR::ScalingRule undef
+      Paws::EMR::ScalingTrigger undef
       Paws::EMR::ScriptBootstrapActionConfig undef
+      Paws::EMR::SecurityConfigurationSummary undef
       Paws::EMR::SetTerminationProtection undef
       Paws::EMR::SetVisibleToAllUsers undef
       Paws::EMR::ShrinkPolicy undef
+      Paws::EMR::SimpleScalingPolicyConfiguration undef
       Paws::EMR::Step undef
       Paws::EMR::StepConfig undef
       Paws::EMR::StepDetail undef
@@ -5401,6 +5998,7 @@ DISTRIBUTIONS
       Paws::ElastiCache::ModifyReplicationGroup undef
       Paws::ElastiCache::ModifyReplicationGroupResult undef
       Paws::ElastiCache::NodeGroup undef
+      Paws::ElastiCache::NodeGroupConfiguration undef
       Paws::ElastiCache::NodeGroupMember undef
       Paws::ElastiCache::NodeSnapshot undef
       Paws::ElastiCache::NotificationConfiguration undef
@@ -5434,12 +6032,16 @@ DISTRIBUTIONS
       Paws::ElasticBeanstalk::ApplicationDescriptionMessage undef
       Paws::ElasticBeanstalk::ApplicationDescriptionsMessage undef
       Paws::ElasticBeanstalk::ApplicationMetrics undef
+      Paws::ElasticBeanstalk::ApplicationResourceLifecycleConfig undef
+      Paws::ElasticBeanstalk::ApplicationResourceLifecycleDescriptionMessage undef
       Paws::ElasticBeanstalk::ApplicationVersionDescription undef
       Paws::ElasticBeanstalk::ApplicationVersionDescriptionMessage undef
       Paws::ElasticBeanstalk::ApplicationVersionDescriptionsMessage undef
+      Paws::ElasticBeanstalk::ApplicationVersionLifecycleConfig undef
       Paws::ElasticBeanstalk::ApplyEnvironmentManagedAction undef
       Paws::ElasticBeanstalk::ApplyEnvironmentManagedActionResult undef
       Paws::ElasticBeanstalk::AutoScalingGroup undef
+      Paws::ElasticBeanstalk::BuildConfiguration undef
       Paws::ElasticBeanstalk::CPUUtilization undef
       Paws::ElasticBeanstalk::CheckDNSAvailability undef
       Paws::ElasticBeanstalk::CheckDNSAvailabilityResultMessage undef
@@ -5497,6 +6099,8 @@ DISTRIBUTIONS
       Paws::ElasticBeanstalk::LoadBalancerDescription undef
       Paws::ElasticBeanstalk::ManagedAction undef
       Paws::ElasticBeanstalk::ManagedActionHistoryItem undef
+      Paws::ElasticBeanstalk::MaxAgeRule undef
+      Paws::ElasticBeanstalk::MaxCountRule undef
       Paws::ElasticBeanstalk::OptionRestrictionRegex undef
       Paws::ElasticBeanstalk::OptionSpecification undef
       Paws::ElasticBeanstalk::Queue undef
@@ -5508,6 +6112,7 @@ DISTRIBUTIONS
       Paws::ElasticBeanstalk::S3Location undef
       Paws::ElasticBeanstalk::SingleInstanceHealth undef
       Paws::ElasticBeanstalk::SolutionStackDescription undef
+      Paws::ElasticBeanstalk::SourceBuildInformation undef
       Paws::ElasticBeanstalk::SourceConfiguration undef
       Paws::ElasticBeanstalk::StatusCodes undef
       Paws::ElasticBeanstalk::SwapEnvironmentCNAMEs undef
@@ -5516,6 +6121,7 @@ DISTRIBUTIONS
       Paws::ElasticBeanstalk::TerminateEnvironment undef
       Paws::ElasticBeanstalk::Trigger undef
       Paws::ElasticBeanstalk::UpdateApplication undef
+      Paws::ElasticBeanstalk::UpdateApplicationResourceLifecycle undef
       Paws::ElasticBeanstalk::UpdateApplicationVersion undef
       Paws::ElasticBeanstalk::UpdateConfigurationTemplate undef
       Paws::ElasticBeanstalk::UpdateEnvironment undef
@@ -5547,6 +6153,7 @@ DISTRIBUTIONS
       Paws::ElasticTranscoder::DetectedProperties undef
       Paws::ElasticTranscoder::Encryption undef
       Paws::ElasticTranscoder::HlsContentProtection undef
+      Paws::ElasticTranscoder::InputCaptions undef
       Paws::ElasticTranscoder::Job undef
       Paws::ElasticTranscoder::JobAlbumArt undef
       Paws::ElasticTranscoder::JobInput undef
@@ -5607,9 +6214,15 @@ DISTRIBUTIONS
       Paws::Firehose::ElasticsearchDestinationUpdate undef
       Paws::Firehose::ElasticsearchRetryOptions undef
       Paws::Firehose::EncryptionConfiguration undef
+      Paws::Firehose::ExtendedS3DestinationConfiguration undef
+      Paws::Firehose::ExtendedS3DestinationDescription undef
+      Paws::Firehose::ExtendedS3DestinationUpdate undef
       Paws::Firehose::KMSEncryptionConfig undef
       Paws::Firehose::ListDeliveryStreams undef
       Paws::Firehose::ListDeliveryStreamsOutput undef
+      Paws::Firehose::ProcessingConfiguration undef
+      Paws::Firehose::Processor undef
+      Paws::Firehose::ProcessorParameter undef
       Paws::Firehose::PutRecord undef
       Paws::Firehose::PutRecordBatch undef
       Paws::Firehose::PutRecordBatchOutput undef
@@ -5665,6 +6278,8 @@ DISTRIBUTIONS
       Paws::GameLift::DescribeGameSessionDetailsOutput undef
       Paws::GameLift::DescribeGameSessions undef
       Paws::GameLift::DescribeGameSessionsOutput undef
+      Paws::GameLift::DescribeInstances undef
+      Paws::GameLift::DescribeInstancesOutput undef
       Paws::GameLift::DescribePlayerSessions undef
       Paws::GameLift::DescribePlayerSessionsOutput undef
       Paws::GameLift::DescribeRuntimeConfiguration undef
@@ -5682,6 +6297,11 @@ DISTRIBUTIONS
       Paws::GameLift::GameSessionDetail undef
       Paws::GameLift::GetGameSessionLogUrl undef
       Paws::GameLift::GetGameSessionLogUrlOutput undef
+      Paws::GameLift::GetInstanceAccess undef
+      Paws::GameLift::GetInstanceAccessOutput undef
+      Paws::GameLift::Instance undef
+      Paws::GameLift::InstanceAccess undef
+      Paws::GameLift::InstanceCredentials undef
       Paws::GameLift::IpPermission undef
       Paws::GameLift::ListAliases undef
       Paws::GameLift::ListAliasesOutput undef
@@ -5696,6 +6316,7 @@ DISTRIBUTIONS
       Paws::GameLift::RequestUploadCredentialsOutput undef
       Paws::GameLift::ResolveAlias undef
       Paws::GameLift::ResolveAliasOutput undef
+      Paws::GameLift::ResourceCreationLimitPolicy undef
       Paws::GameLift::RoutingStrategy undef
       Paws::GameLift::RuntimeConfiguration undef
       Paws::GameLift::S3Location undef
@@ -5761,11 +6382,16 @@ DISTRIBUTIONS
       Paws::Glacier::ListMultipartUploadsOutput undef
       Paws::Glacier::ListParts undef
       Paws::Glacier::ListPartsOutput undef
+      Paws::Glacier::ListProvisionedCapacity undef
+      Paws::Glacier::ListProvisionedCapacityOutput undef
       Paws::Glacier::ListTagsForVault undef
       Paws::Glacier::ListTagsForVaultOutput undef
       Paws::Glacier::ListVaults undef
       Paws::Glacier::ListVaultsOutput undef
       Paws::Glacier::PartListElement undef
+      Paws::Glacier::ProvisionedCapacityDescription undef
+      Paws::Glacier::PurchaseProvisionedCapacity undef
+      Paws::Glacier::PurchaseProvisionedCapacityOutput undef
       Paws::Glacier::RemoveTagsFromVault undef
       Paws::Glacier::SetDataRetrievalPolicy undef
       Paws::Glacier::SetVaultAccessPolicy undef
@@ -5778,6 +6404,33 @@ DISTRIBUTIONS
       Paws::Glacier::VaultAccessPolicy undef
       Paws::Glacier::VaultLockPolicy undef
       Paws::Glacier::VaultNotificationConfig undef
+      Paws::Health undef
+      Paws::Health::AffectedEntity undef
+      Paws::Health::DateTimeRange undef
+      Paws::Health::DescribeAffectedEntities undef
+      Paws::Health::DescribeAffectedEntitiesResponse undef
+      Paws::Health::DescribeEntityAggregates undef
+      Paws::Health::DescribeEntityAggregatesResponse undef
+      Paws::Health::DescribeEventAggregates undef
+      Paws::Health::DescribeEventAggregatesResponse undef
+      Paws::Health::DescribeEventDetails undef
+      Paws::Health::DescribeEventDetailsResponse undef
+      Paws::Health::DescribeEventTypes undef
+      Paws::Health::DescribeEventTypesResponse undef
+      Paws::Health::DescribeEvents undef
+      Paws::Health::DescribeEventsResponse undef
+      Paws::Health::EntityAggregate undef
+      Paws::Health::EntityFilter undef
+      Paws::Health::Event undef
+      Paws::Health::EventAggregate undef
+      Paws::Health::EventDescription undef
+      Paws::Health::EventDetails undef
+      Paws::Health::EventDetailsErrorItem undef
+      Paws::Health::EventFilter undef
+      Paws::Health::EventMetadata undef
+      Paws::Health::EventType undef
+      Paws::Health::EventTypeFilter undef
+      Paws::Health::TagSet undef
       Paws::IAM undef
       Paws::IAM::AccessKey undef
       Paws::IAM::AccessKeyLastUsed undef
@@ -5810,6 +6463,8 @@ DISTRIBUTIONS
       Paws::IAM::CreateRoleResponse undef
       Paws::IAM::CreateSAMLProvider undef
       Paws::IAM::CreateSAMLProviderResponse undef
+      Paws::IAM::CreateServiceSpecificCredential undef
+      Paws::IAM::CreateServiceSpecificCredentialResponse undef
       Paws::IAM::CreateUser undef
       Paws::IAM::CreateUserResponse undef
       Paws::IAM::CreateVirtualMFADevice undef
@@ -5830,6 +6485,7 @@ DISTRIBUTIONS
       Paws::IAM::DeleteSAMLProvider undef
       Paws::IAM::DeleteSSHPublicKey undef
       Paws::IAM::DeleteServerCertificate undef
+      Paws::IAM::DeleteServiceSpecificCredential undef
       Paws::IAM::DeleteSigningCertificate undef
       Paws::IAM::DeleteUser undef
       Paws::IAM::DeleteUserPolicy undef
@@ -5926,6 +6582,8 @@ DISTRIBUTIONS
       Paws::IAM::ListSSHPublicKeysResponse undef
       Paws::IAM::ListServerCertificates undef
       Paws::IAM::ListServerCertificatesResponse undef
+      Paws::IAM::ListServiceSpecificCredentials undef
+      Paws::IAM::ListServiceSpecificCredentialsResponse undef
       Paws::IAM::ListSigningCertificates undef
       Paws::IAM::ListSigningCertificatesResponse undef
       Paws::IAM::ListUserPolicies undef
@@ -5952,6 +6610,8 @@ DISTRIBUTIONS
       Paws::IAM::RemoveClientIDFromOpenIDConnectProvider undef
       Paws::IAM::RemoveRoleFromInstanceProfile undef
       Paws::IAM::RemoveUserFromGroup undef
+      Paws::IAM::ResetServiceSpecificCredential undef
+      Paws::IAM::ResetServiceSpecificCredentialResponse undef
       Paws::IAM::ResourceSpecificResult undef
       Paws::IAM::ResyncMFADevice undef
       Paws::IAM::Role undef
@@ -5961,6 +6621,8 @@ DISTRIBUTIONS
       Paws::IAM::SSHPublicKeyMetadata undef
       Paws::IAM::ServerCertificate undef
       Paws::IAM::ServerCertificateMetadata undef
+      Paws::IAM::ServiceSpecificCredential undef
+      Paws::IAM::ServiceSpecificCredentialMetadata undef
       Paws::IAM::SetDefaultPolicyVersion undef
       Paws::IAM::SigningCertificate undef
       Paws::IAM::SimulateCustomPolicy undef
@@ -5978,6 +6640,7 @@ DISTRIBUTIONS
       Paws::IAM::UpdateSAMLProviderResponse undef
       Paws::IAM::UpdateSSHPublicKey undef
       Paws::IAM::UpdateServerCertificate undef
+      Paws::IAM::UpdateServiceSpecificCredential undef
       Paws::IAM::UpdateSigningCertificate undef
       Paws::IAM::UpdateUser undef
       Paws::IAM::UploadSSHPublicKey undef
@@ -6145,6 +6808,7 @@ DISTRIBUTIONS
       Paws::IoT::DetachThingPrincipalResponse undef
       Paws::IoT::DisableTopicRule undef
       Paws::IoT::DynamoDBAction undef
+      Paws::IoT::DynamoDBv2Action undef
       Paws::IoT::ElasticsearchAction undef
       Paws::IoT::EnableTopicRule undef
       Paws::IoT::FirehoseAction undef
@@ -6191,6 +6855,7 @@ DISTRIBUTIONS
       Paws::IoT::OutgoingCertificate undef
       Paws::IoT::Policy undef
       Paws::IoT::PolicyVersion undef
+      Paws::IoT::PutItemInput undef
       Paws::IoT::RegisterCACertificate undef
       Paws::IoT::RegisterCACertificateResponse undef
       Paws::IoT::RegisterCertificate undef
@@ -6288,6 +6953,8 @@ DISTRIBUTIONS
       Paws::Kinesis::CreateStream undef
       Paws::Kinesis::DecreaseStreamRetentionPeriod undef
       Paws::Kinesis::DeleteStream undef
+      Paws::Kinesis::DescribeLimits undef
+      Paws::Kinesis::DescribeLimitsOutput undef
       Paws::Kinesis::DescribeStream undef
       Paws::Kinesis::DescribeStreamOutput undef
       Paws::Kinesis::DisableEnhancedMonitoring undef
@@ -6319,6 +6986,8 @@ DISTRIBUTIONS
       Paws::Kinesis::StreamDescription undef
       Paws::Kinesis::Tag undef
       Paws::Kinesis::TagMap undef
+      Paws::Kinesis::UpdateShardCount undef
+      Paws::Kinesis::UpdateShardCountOutput undef
       Paws::KinesisAnalytics undef
       Paws::KinesisAnalytics::AddApplicationInput undef
       Paws::KinesisAnalytics::AddApplicationInputResponse undef
@@ -6386,19 +7055,28 @@ DISTRIBUTIONS
       Paws::KinesisAnalytics::UpdateApplication undef
       Paws::KinesisAnalytics::UpdateApplicationResponse undef
       Paws::Lambda undef
+      Paws::Lambda::AccountLimit undef
+      Paws::Lambda::AccountUsage undef
       Paws::Lambda::AddPermission undef
       Paws::Lambda::AddPermissionResponse undef
       Paws::Lambda::AliasConfiguration undef
       Paws::Lambda::CreateAlias undef
       Paws::Lambda::CreateEventSourceMapping undef
       Paws::Lambda::CreateFunction undef
+      Paws::Lambda::DeadLetterConfig undef
       Paws::Lambda::DeleteAlias undef
       Paws::Lambda::DeleteEventSourceMapping undef
       Paws::Lambda::DeleteFunction undef
+      Paws::Lambda::Environment undef
+      Paws::Lambda::EnvironmentError undef
+      Paws::Lambda::EnvironmentResponse undef
+      Paws::Lambda::EnvironmentVariables undef
       Paws::Lambda::EventSourceMappingConfiguration undef
       Paws::Lambda::FunctionCode undef
       Paws::Lambda::FunctionCodeLocation undef
       Paws::Lambda::FunctionConfiguration undef
+      Paws::Lambda::GetAccountSettings undef
+      Paws::Lambda::GetAccountSettingsResponse undef
       Paws::Lambda::GetAlias undef
       Paws::Lambda::GetEventSourceMapping undef
       Paws::Lambda::GetFunction undef
@@ -6426,6 +7104,123 @@ DISTRIBUTIONS
       Paws::Lambda::UpdateFunctionConfiguration undef
       Paws::Lambda::VpcConfig undef
       Paws::Lambda::VpcConfigResponse undef
+      Paws::Lightsail undef
+      Paws::Lightsail::AllocateStaticIp undef
+      Paws::Lightsail::AllocateStaticIpResult undef
+      Paws::Lightsail::AttachStaticIp undef
+      Paws::Lightsail::AttachStaticIpResult undef
+      Paws::Lightsail::AvailabilityZone undef
+      Paws::Lightsail::Blueprint undef
+      Paws::Lightsail::Bundle undef
+      Paws::Lightsail::CloseInstancePublicPorts undef
+      Paws::Lightsail::CloseInstancePublicPortsResult undef
+      Paws::Lightsail::CreateDomain undef
+      Paws::Lightsail::CreateDomainEntry undef
+      Paws::Lightsail::CreateDomainEntryResult undef
+      Paws::Lightsail::CreateDomainResult undef
+      Paws::Lightsail::CreateInstanceSnapshot undef
+      Paws::Lightsail::CreateInstanceSnapshotResult undef
+      Paws::Lightsail::CreateInstances undef
+      Paws::Lightsail::CreateInstancesFromSnapshot undef
+      Paws::Lightsail::CreateInstancesFromSnapshotResult undef
+      Paws::Lightsail::CreateInstancesResult undef
+      Paws::Lightsail::CreateKeyPair undef
+      Paws::Lightsail::CreateKeyPairResult undef
+      Paws::Lightsail::DeleteDomain undef
+      Paws::Lightsail::DeleteDomainEntry undef
+      Paws::Lightsail::DeleteDomainEntryResult undef
+      Paws::Lightsail::DeleteDomainResult undef
+      Paws::Lightsail::DeleteInstance undef
+      Paws::Lightsail::DeleteInstanceResult undef
+      Paws::Lightsail::DeleteInstanceSnapshot undef
+      Paws::Lightsail::DeleteInstanceSnapshotResult undef
+      Paws::Lightsail::DeleteKeyPair undef
+      Paws::Lightsail::DeleteKeyPairResult undef
+      Paws::Lightsail::DetachStaticIp undef
+      Paws::Lightsail::DetachStaticIpResult undef
+      Paws::Lightsail::Disk undef
+      Paws::Lightsail::Domain undef
+      Paws::Lightsail::DomainEntry undef
+      Paws::Lightsail::DomainEntryOptions undef
+      Paws::Lightsail::DownloadDefaultKeyPair undef
+      Paws::Lightsail::DownloadDefaultKeyPairResult undef
+      Paws::Lightsail::GetActiveNames undef
+      Paws::Lightsail::GetActiveNamesResult undef
+      Paws::Lightsail::GetBlueprints undef
+      Paws::Lightsail::GetBlueprintsResult undef
+      Paws::Lightsail::GetBundles undef
+      Paws::Lightsail::GetBundlesResult undef
+      Paws::Lightsail::GetDomain undef
+      Paws::Lightsail::GetDomainResult undef
+      Paws::Lightsail::GetDomains undef
+      Paws::Lightsail::GetDomainsResult undef
+      Paws::Lightsail::GetInstance undef
+      Paws::Lightsail::GetInstanceAccessDetails undef
+      Paws::Lightsail::GetInstanceAccessDetailsResult undef
+      Paws::Lightsail::GetInstanceMetricData undef
+      Paws::Lightsail::GetInstanceMetricDataResult undef
+      Paws::Lightsail::GetInstancePortStates undef
+      Paws::Lightsail::GetInstancePortStatesResult undef
+      Paws::Lightsail::GetInstanceResult undef
+      Paws::Lightsail::GetInstanceSnapshot undef
+      Paws::Lightsail::GetInstanceSnapshotResult undef
+      Paws::Lightsail::GetInstanceSnapshots undef
+      Paws::Lightsail::GetInstanceSnapshotsResult undef
+      Paws::Lightsail::GetInstanceState undef
+      Paws::Lightsail::GetInstanceStateResult undef
+      Paws::Lightsail::GetInstances undef
+      Paws::Lightsail::GetInstancesResult undef
+      Paws::Lightsail::GetKeyPair undef
+      Paws::Lightsail::GetKeyPairResult undef
+      Paws::Lightsail::GetKeyPairs undef
+      Paws::Lightsail::GetKeyPairsResult undef
+      Paws::Lightsail::GetOperation undef
+      Paws::Lightsail::GetOperationResult undef
+      Paws::Lightsail::GetOperations undef
+      Paws::Lightsail::GetOperationsForResource undef
+      Paws::Lightsail::GetOperationsForResourceResult undef
+      Paws::Lightsail::GetOperationsResult undef
+      Paws::Lightsail::GetRegions undef
+      Paws::Lightsail::GetRegionsResult undef
+      Paws::Lightsail::GetStaticIp undef
+      Paws::Lightsail::GetStaticIpResult undef
+      Paws::Lightsail::GetStaticIps undef
+      Paws::Lightsail::GetStaticIpsResult undef
+      Paws::Lightsail::ImportKeyPair undef
+      Paws::Lightsail::ImportKeyPairResult undef
+      Paws::Lightsail::Instance undef
+      Paws::Lightsail::InstanceAccessDetails undef
+      Paws::Lightsail::InstanceHardware undef
+      Paws::Lightsail::InstanceNetworking undef
+      Paws::Lightsail::InstancePortInfo undef
+      Paws::Lightsail::InstanceSnapshot undef
+      Paws::Lightsail::InstanceState undef
+      Paws::Lightsail::IsVpcPeered undef
+      Paws::Lightsail::IsVpcPeeredResult undef
+      Paws::Lightsail::KeyPair undef
+      Paws::Lightsail::MetricDatapoint undef
+      Paws::Lightsail::MonthlyTransfer undef
+      Paws::Lightsail::OpenInstancePublicPorts undef
+      Paws::Lightsail::OpenInstancePublicPortsResult undef
+      Paws::Lightsail::Operation undef
+      Paws::Lightsail::PeerVpc undef
+      Paws::Lightsail::PeerVpcResult undef
+      Paws::Lightsail::PortInfo undef
+      Paws::Lightsail::RebootInstance undef
+      Paws::Lightsail::RebootInstanceResult undef
+      Paws::Lightsail::Region undef
+      Paws::Lightsail::ReleaseStaticIp undef
+      Paws::Lightsail::ReleaseStaticIpResult undef
+      Paws::Lightsail::ResourceLocation undef
+      Paws::Lightsail::StartInstance undef
+      Paws::Lightsail::StartInstanceResult undef
+      Paws::Lightsail::StaticIp undef
+      Paws::Lightsail::StopInstance undef
+      Paws::Lightsail::StopInstanceResult undef
+      Paws::Lightsail::UnpeerVpc undef
+      Paws::Lightsail::UnpeerVpcResult undef
+      Paws::Lightsail::UpdateDomainEntry undef
+      Paws::Lightsail::UpdateDomainEntryResult undef
       Paws::MachineLearning undef
       Paws::MachineLearning::AddTags undef
       Paws::MachineLearning::AddTagsOutput undef
@@ -6512,8 +7307,14 @@ DISTRIBUTIONS
       Paws::MarketplaceCommerceAnalytics::StartSupportDataExport undef
       Paws::MarketplaceCommerceAnalytics::StartSupportDataExportResult undef
       Paws::MarketplaceMetering undef
+      Paws::MarketplaceMetering::BatchMeterUsage undef
+      Paws::MarketplaceMetering::BatchMeterUsageResult undef
       Paws::MarketplaceMetering::MeterUsage undef
       Paws::MarketplaceMetering::MeterUsageResult undef
+      Paws::MarketplaceMetering::ResolveCustomer undef
+      Paws::MarketplaceMetering::ResolveCustomerResult undef
+      Paws::MarketplaceMetering::UsageRecord undef
+      Paws::MarketplaceMetering::UsageRecordResult undef
       Paws::Net::APIRequest undef
       Paws::Net::Caller undef
       Paws::Net::Caller::Attribute::Trait::NameInRequest undef
@@ -6524,6 +7325,7 @@ DISTRIBUTIONS
       Paws::Net::JsonCaller undef
       Paws::Net::JsonResponse undef
       Paws::Net::LWPCaller undef
+      Paws::Net::MockCaller undef
       Paws::Net::MojoAsyncCaller undef
       Paws::Net::NoSignature undef
       Paws::Net::QueryCaller undef
@@ -6689,9 +7491,169 @@ DISTRIBUTIONS
       Paws::OpsWorks::Volume undef
       Paws::OpsWorks::VolumeConfiguration undef
       Paws::OpsWorks::WeeklyAutoScalingSchedule undef
+      Paws::OpsWorksCM undef
+      Paws::OpsWorksCM::AccountAttribute undef
+      Paws::OpsWorksCM::AssociateNode undef
+      Paws::OpsWorksCM::AssociateNodeResponse undef
+      Paws::OpsWorksCM::Backup undef
+      Paws::OpsWorksCM::CreateBackup undef
+      Paws::OpsWorksCM::CreateBackupResponse undef
+      Paws::OpsWorksCM::CreateServer undef
+      Paws::OpsWorksCM::CreateServerResponse undef
+      Paws::OpsWorksCM::DeleteBackup undef
+      Paws::OpsWorksCM::DeleteBackupResponse undef
+      Paws::OpsWorksCM::DeleteServer undef
+      Paws::OpsWorksCM::DeleteServerResponse undef
+      Paws::OpsWorksCM::DescribeAccountAttributes undef
+      Paws::OpsWorksCM::DescribeAccountAttributesResponse undef
+      Paws::OpsWorksCM::DescribeBackups undef
+      Paws::OpsWorksCM::DescribeBackupsResponse undef
+      Paws::OpsWorksCM::DescribeEvents undef
+      Paws::OpsWorksCM::DescribeEventsResponse undef
+      Paws::OpsWorksCM::DescribeNodeAssociationStatus undef
+      Paws::OpsWorksCM::DescribeNodeAssociationStatusResponse undef
+      Paws::OpsWorksCM::DescribeServers undef
+      Paws::OpsWorksCM::DescribeServersResponse undef
+      Paws::OpsWorksCM::DisassociateNode undef
+      Paws::OpsWorksCM::DisassociateNodeResponse undef
+      Paws::OpsWorksCM::EngineAttribute undef
+      Paws::OpsWorksCM::RestoreServer undef
+      Paws::OpsWorksCM::RestoreServerResponse undef
+      Paws::OpsWorksCM::Server undef
+      Paws::OpsWorksCM::ServerEvent undef
+      Paws::OpsWorksCM::StartMaintenance undef
+      Paws::OpsWorksCM::StartMaintenanceResponse undef
+      Paws::OpsWorksCM::UpdateServer undef
+      Paws::OpsWorksCM::UpdateServerEngineAttributes undef
+      Paws::OpsWorksCM::UpdateServerEngineAttributesResponse undef
+      Paws::OpsWorksCM::UpdateServerResponse undef
+      Paws::Pinpoint undef
+      Paws::Pinpoint::APNSChannelRequest undef
+      Paws::Pinpoint::APNSChannelResponse undef
+      Paws::Pinpoint::ActivitiesResponse undef
+      Paws::Pinpoint::ActivityResponse undef
+      Paws::Pinpoint::ApplicationSettingsResource undef
+      Paws::Pinpoint::AttributeDimension undef
+      Paws::Pinpoint::CampaignLimits undef
+      Paws::Pinpoint::CampaignResponse undef
+      Paws::Pinpoint::CampaignState undef
+      Paws::Pinpoint::CampaignsResponse undef
+      Paws::Pinpoint::CreateCampaign undef
+      Paws::Pinpoint::CreateCampaignResponse undef
+      Paws::Pinpoint::CreateImportJob undef
+      Paws::Pinpoint::CreateImportJobResponse undef
+      Paws::Pinpoint::CreateSegment undef
+      Paws::Pinpoint::CreateSegmentResponse undef
+      Paws::Pinpoint::DeleteApnsChannel undef
+      Paws::Pinpoint::DeleteApnsChannelResponse undef
+      Paws::Pinpoint::DeleteCampaign undef
+      Paws::Pinpoint::DeleteCampaignResponse undef
+      Paws::Pinpoint::DeleteGcmChannel undef
+      Paws::Pinpoint::DeleteGcmChannelResponse undef
+      Paws::Pinpoint::DeleteSegment undef
+      Paws::Pinpoint::DeleteSegmentResponse undef
+      Paws::Pinpoint::EndpointBatchItem undef
+      Paws::Pinpoint::EndpointBatchRequest undef
+      Paws::Pinpoint::EndpointDemographic undef
+      Paws::Pinpoint::EndpointLocation undef
+      Paws::Pinpoint::EndpointRequest undef
+      Paws::Pinpoint::EndpointResponse undef
+      Paws::Pinpoint::EndpointUser undef
+      Paws::Pinpoint::GCMChannelRequest undef
+      Paws::Pinpoint::GCMChannelResponse undef
+      Paws::Pinpoint::GetApnsChannel undef
+      Paws::Pinpoint::GetApnsChannelResponse undef
+      Paws::Pinpoint::GetApplicationSettings undef
+      Paws::Pinpoint::GetApplicationSettingsResponse undef
+      Paws::Pinpoint::GetCampaign undef
+      Paws::Pinpoint::GetCampaignActivities undef
+      Paws::Pinpoint::GetCampaignActivitiesResponse undef
+      Paws::Pinpoint::GetCampaignResponse undef
+      Paws::Pinpoint::GetCampaignVersion undef
+      Paws::Pinpoint::GetCampaignVersionResponse undef
+      Paws::Pinpoint::GetCampaignVersions undef
+      Paws::Pinpoint::GetCampaignVersionsResponse undef
+      Paws::Pinpoint::GetCampaigns undef
+      Paws::Pinpoint::GetCampaignsResponse undef
+      Paws::Pinpoint::GetEndpoint undef
+      Paws::Pinpoint::GetEndpointResponse undef
+      Paws::Pinpoint::GetGcmChannel undef
+      Paws::Pinpoint::GetGcmChannelResponse undef
+      Paws::Pinpoint::GetImportJob undef
+      Paws::Pinpoint::GetImportJobResponse undef
+      Paws::Pinpoint::GetImportJobs undef
+      Paws::Pinpoint::GetImportJobsResponse undef
+      Paws::Pinpoint::GetSegment undef
+      Paws::Pinpoint::GetSegmentImportJobs undef
+      Paws::Pinpoint::GetSegmentImportJobsResponse undef
+      Paws::Pinpoint::GetSegmentResponse undef
+      Paws::Pinpoint::GetSegmentVersion undef
+      Paws::Pinpoint::GetSegmentVersionResponse undef
+      Paws::Pinpoint::GetSegmentVersions undef
+      Paws::Pinpoint::GetSegmentVersionsResponse undef
+      Paws::Pinpoint::GetSegments undef
+      Paws::Pinpoint::GetSegmentsResponse undef
+      Paws::Pinpoint::ImportJobRequest undef
+      Paws::Pinpoint::ImportJobResource undef
+      Paws::Pinpoint::ImportJobResponse undef
+      Paws::Pinpoint::ImportJobsResponse undef
+      Paws::Pinpoint::MapOfAttributeDimension undef
+      Paws::Pinpoint::MapOfListOf__string undef
+      Paws::Pinpoint::MapOf__double undef
+      Paws::Pinpoint::Message undef
+      Paws::Pinpoint::MessageBody undef
+      Paws::Pinpoint::MessageConfiguration undef
+      Paws::Pinpoint::QuietTime undef
+      Paws::Pinpoint::RecencyDimension undef
+      Paws::Pinpoint::Schedule undef
+      Paws::Pinpoint::SegmentBehaviors undef
+      Paws::Pinpoint::SegmentDemographics undef
+      Paws::Pinpoint::SegmentDimensions undef
+      Paws::Pinpoint::SegmentImportResource undef
+      Paws::Pinpoint::SegmentLocation undef
+      Paws::Pinpoint::SegmentResponse undef
+      Paws::Pinpoint::SegmentsResponse undef
+      Paws::Pinpoint::SetDimension undef
+      Paws::Pinpoint::TreatmentResource undef
+      Paws::Pinpoint::UpdateApnsChannel undef
+      Paws::Pinpoint::UpdateApnsChannelResponse undef
+      Paws::Pinpoint::UpdateApplicationSettings undef
+      Paws::Pinpoint::UpdateApplicationSettingsResponse undef
+      Paws::Pinpoint::UpdateCampaign undef
+      Paws::Pinpoint::UpdateCampaignResponse undef
+      Paws::Pinpoint::UpdateEndpoint undef
+      Paws::Pinpoint::UpdateEndpointResponse undef
+      Paws::Pinpoint::UpdateEndpointsBatch undef
+      Paws::Pinpoint::UpdateEndpointsBatchResponse undef
+      Paws::Pinpoint::UpdateGcmChannel undef
+      Paws::Pinpoint::UpdateGcmChannelResponse undef
+      Paws::Pinpoint::UpdateSegment undef
+      Paws::Pinpoint::UpdateSegmentResponse undef
+      Paws::Pinpoint::WriteApplicationSettingsRequest undef
+      Paws::Pinpoint::WriteCampaignRequest undef
+      Paws::Pinpoint::WriteSegmentRequest undef
+      Paws::Pinpoint::WriteTreatmentResource undef
+      Paws::Polly undef
+      Paws::Polly::DeleteLexicon undef
+      Paws::Polly::DeleteLexiconOutput undef
+      Paws::Polly::DescribeVoices undef
+      Paws::Polly::DescribeVoicesOutput undef
+      Paws::Polly::GetLexicon undef
+      Paws::Polly::GetLexiconOutput undef
+      Paws::Polly::Lexicon undef
+      Paws::Polly::LexiconAttributes undef
+      Paws::Polly::LexiconDescription undef
+      Paws::Polly::ListLexicons undef
+      Paws::Polly::ListLexiconsOutput undef
+      Paws::Polly::PutLexicon undef
+      Paws::Polly::PutLexiconOutput undef
+      Paws::Polly::SynthesizeSpeech undef
+      Paws::Polly::SynthesizeSpeechOutput undef
+      Paws::Polly::Voice undef
       Paws::RDS undef
       Paws::RDS::AccountAttributesMessage undef
       Paws::RDS::AccountQuota undef
+      Paws::RDS::AddRoleToDBCluster undef
       Paws::RDS::AddSourceIdentifierToSubscription undef
       Paws::RDS::AddSourceIdentifierToSubscriptionResult undef
       Paws::RDS::AddTagsToResource undef
@@ -6743,6 +7705,7 @@ DISTRIBUTIONS
       Paws::RDS::DBClusterParameterGroupDetails undef
       Paws::RDS::DBClusterParameterGroupNameMessage undef
       Paws::RDS::DBClusterParameterGroupsMessage undef
+      Paws::RDS::DBClusterRole undef
       Paws::RDS::DBClusterSnapshot undef
       Paws::RDS::DBClusterSnapshotAttribute undef
       Paws::RDS::DBClusterSnapshotAttributesResult undef
@@ -6814,6 +7777,7 @@ DISTRIBUTIONS
       Paws::RDS::DescribePendingMaintenanceActions undef
       Paws::RDS::DescribeReservedDBInstances undef
       Paws::RDS::DescribeReservedDBInstancesOfferings undef
+      Paws::RDS::DescribeSourceRegions undef
       Paws::RDS::DomainMembership undef
       Paws::RDS::DownloadDBLogFilePortion undef
       Paws::RDS::DownloadDBLogFilePortionDetails undef
@@ -6839,8 +7803,10 @@ DISTRIBUTIONS
       Paws::RDS::ModifyDBInstance undef
       Paws::RDS::ModifyDBInstanceResult undef
       Paws::RDS::ModifyDBParameterGroup undef
+      Paws::RDS::ModifyDBSnapshot undef
       Paws::RDS::ModifyDBSnapshotAttribute undef
       Paws::RDS::ModifyDBSnapshotAttributeResult undef
+      Paws::RDS::ModifyDBSnapshotResult undef
       Paws::RDS::ModifyDBSubnetGroup undef
       Paws::RDS::ModifyDBSubnetGroupResult undef
       Paws::RDS::ModifyEventSubscription undef
@@ -6872,6 +7838,7 @@ DISTRIBUTIONS
       Paws::RDS::RebootDBInstance undef
       Paws::RDS::RebootDBInstanceResult undef
       Paws::RDS::RecurringCharge undef
+      Paws::RDS::RemoveRoleFromDBCluster undef
       Paws::RDS::RemoveSourceIdentifierFromSubscription undef
       Paws::RDS::RemoveSourceIdentifierFromSubscriptionResult undef
       Paws::RDS::RemoveTagsFromResource undef
@@ -6894,9 +7861,12 @@ DISTRIBUTIONS
       Paws::RDS::RestoreDBInstanceToPointInTimeResult undef
       Paws::RDS::RevokeDBSecurityGroupIngress undef
       Paws::RDS::RevokeDBSecurityGroupIngressResult undef
+      Paws::RDS::SourceRegion undef
+      Paws::RDS::SourceRegionMessage undef
       Paws::RDS::Subnet undef
       Paws::RDS::Tag undef
       Paws::RDS::TagListMessage undef
+      Paws::RDS::Timezone undef
       Paws::RDS::UpgradeTarget undef
       Paws::RDS::VpcSecurityGroupMembership undef
       Paws::RedShift undef
@@ -7051,6 +8021,52 @@ DISTRIBUTIONS
       Paws::RedShift::TaggedResource undef
       Paws::RedShift::TaggedResourceListMessage undef
       Paws::RedShift::VpcSecurityGroupMembership undef
+      Paws::Rekognition undef
+      Paws::Rekognition::Beard undef
+      Paws::Rekognition::BoundingBox undef
+      Paws::Rekognition::CompareFaces undef
+      Paws::Rekognition::CompareFacesMatch undef
+      Paws::Rekognition::CompareFacesResponse undef
+      Paws::Rekognition::ComparedFace undef
+      Paws::Rekognition::ComparedSourceImageFace undef
+      Paws::Rekognition::CreateCollection undef
+      Paws::Rekognition::CreateCollectionResponse undef
+      Paws::Rekognition::DeleteCollection undef
+      Paws::Rekognition::DeleteCollectionResponse undef
+      Paws::Rekognition::DeleteFaces undef
+      Paws::Rekognition::DeleteFacesResponse undef
+      Paws::Rekognition::DetectFaces undef
+      Paws::Rekognition::DetectFacesResponse undef
+      Paws::Rekognition::DetectLabels undef
+      Paws::Rekognition::DetectLabelsResponse undef
+      Paws::Rekognition::Emotion undef
+      Paws::Rekognition::EyeOpen undef
+      Paws::Rekognition::Eyeglasses undef
+      Paws::Rekognition::Face undef
+      Paws::Rekognition::FaceDetail undef
+      Paws::Rekognition::FaceMatch undef
+      Paws::Rekognition::FaceRecord undef
+      Paws::Rekognition::Gender undef
+      Paws::Rekognition::Image undef
+      Paws::Rekognition::ImageQuality undef
+      Paws::Rekognition::IndexFaces undef
+      Paws::Rekognition::IndexFacesResponse undef
+      Paws::Rekognition::Label undef
+      Paws::Rekognition::Landmark undef
+      Paws::Rekognition::ListCollections undef
+      Paws::Rekognition::ListCollectionsResponse undef
+      Paws::Rekognition::ListFaces undef
+      Paws::Rekognition::ListFacesResponse undef
+      Paws::Rekognition::MouthOpen undef
+      Paws::Rekognition::Mustache undef
+      Paws::Rekognition::Pose undef
+      Paws::Rekognition::S3Object undef
+      Paws::Rekognition::SearchFaces undef
+      Paws::Rekognition::SearchFacesByImage undef
+      Paws::Rekognition::SearchFacesByImageResponse undef
+      Paws::Rekognition::SearchFacesResponse undef
+      Paws::Rekognition::Smile undef
+      Paws::Rekognition::Sunglasses undef
       Paws::Route53 undef
       Paws::Route53::AlarmIdentifier undef
       Paws::Route53::AliasTarget undef
@@ -7058,7 +8074,6 @@ DISTRIBUTIONS
       Paws::Route53::AssociateVPCWithHostedZoneResponse undef
       Paws::Route53::Change undef
       Paws::Route53::ChangeBatch undef
-      Paws::Route53::ChangeBatchRecord undef
       Paws::Route53::ChangeInfo undef
       Paws::Route53::ChangeResourceRecordSets undef
       Paws::Route53::ChangeResourceRecordSetsResponse undef
@@ -7077,6 +8092,8 @@ DISTRIBUTIONS
       Paws::Route53::CreateTrafficPolicyResponse undef
       Paws::Route53::CreateTrafficPolicyVersion undef
       Paws::Route53::CreateTrafficPolicyVersionResponse undef
+      Paws::Route53::CreateVPCAssociationAuthorization undef
+      Paws::Route53::CreateVPCAssociationAuthorizationResponse undef
       Paws::Route53::DelegationSet undef
       Paws::Route53::DeleteHealthCheck undef
       Paws::Route53::DeleteHealthCheckResponse undef
@@ -7088,14 +8105,14 @@ DISTRIBUTIONS
       Paws::Route53::DeleteTrafficPolicyInstance undef
       Paws::Route53::DeleteTrafficPolicyInstanceResponse undef
       Paws::Route53::DeleteTrafficPolicyResponse undef
+      Paws::Route53::DeleteVPCAssociationAuthorization undef
+      Paws::Route53::DeleteVPCAssociationAuthorizationResponse undef
       Paws::Route53::Dimension undef
       Paws::Route53::DisassociateVPCFromHostedZone undef
       Paws::Route53::DisassociateVPCFromHostedZoneResponse undef
       Paws::Route53::GeoLocation undef
       Paws::Route53::GeoLocationDetails undef
       Paws::Route53::GetChange undef
-      Paws::Route53::GetChangeDetails undef
-      Paws::Route53::GetChangeDetailsResponse undef
       Paws::Route53::GetChangeResponse undef
       Paws::Route53::GetCheckerIpRanges undef
       Paws::Route53::GetCheckerIpRangesResponse undef
@@ -7126,10 +8143,6 @@ DISTRIBUTIONS
       Paws::Route53::HealthCheckObservation undef
       Paws::Route53::HostedZone undef
       Paws::Route53::HostedZoneConfig undef
-      Paws::Route53::ListChangeBatchesByHostedZone undef
-      Paws::Route53::ListChangeBatchesByHostedZoneResponse undef
-      Paws::Route53::ListChangeBatchesByRRSet undef
-      Paws::Route53::ListChangeBatchesByRRSetResponse undef
       Paws::Route53::ListGeoLocations undef
       Paws::Route53::ListGeoLocationsResponse undef
       Paws::Route53::ListHealthChecks undef
@@ -7156,11 +8169,15 @@ DISTRIBUTIONS
       Paws::Route53::ListTrafficPolicyInstancesResponse undef
       Paws::Route53::ListTrafficPolicyVersions undef
       Paws::Route53::ListTrafficPolicyVersionsResponse undef
+      Paws::Route53::ListVPCAssociationAuthorizations undef
+      Paws::Route53::ListVPCAssociationAuthorizationsResponse undef
       Paws::Route53::ResourceRecord undef
       Paws::Route53::ResourceRecordSet undef
       Paws::Route53::ResourceTagSet undef
       Paws::Route53::StatusReport undef
       Paws::Route53::Tag undef
+      Paws::Route53::TestDNSAnswer undef
+      Paws::Route53::TestDNSAnswerResponse undef
       Paws::Route53::TrafficPolicy undef
       Paws::Route53::TrafficPolicyInstance undef
       Paws::Route53::TrafficPolicySummary undef
@@ -7234,6 +8251,11 @@ DISTRIBUTIONS
       Paws::S3::AbortMultipartUploadOutput undef
       Paws::S3::AccelerateConfiguration undef
       Paws::S3::AccessControlPolicy undef
+      Paws::S3::AnalyticsAndOperator undef
+      Paws::S3::AnalyticsConfiguration undef
+      Paws::S3::AnalyticsExportDestination undef
+      Paws::S3::AnalyticsFilter undef
+      Paws::S3::AnalyticsS3BucketDestination undef
       Paws::S3::Bucket undef
       Paws::S3::BucketLifecycleConfiguration undef
       Paws::S3::BucketLoggingStatus undef
@@ -7257,8 +8279,11 @@ DISTRIBUTIONS
       Paws::S3::CreateMultipartUploadOutput undef
       Paws::S3::Delete undef
       Paws::S3::DeleteBucket undef
+      Paws::S3::DeleteBucketAnalyticsConfiguration undef
       Paws::S3::DeleteBucketCors undef
+      Paws::S3::DeleteBucketInventoryConfiguration undef
       Paws::S3::DeleteBucketLifecycle undef
+      Paws::S3::DeleteBucketMetricsConfiguration undef
       Paws::S3::DeleteBucketPolicy undef
       Paws::S3::DeleteBucketReplication undef
       Paws::S3::DeleteBucketTagging undef
@@ -7266,6 +8291,8 @@ DISTRIBUTIONS
       Paws::S3::DeleteMarkerEntry undef
       Paws::S3::DeleteObject undef
       Paws::S3::DeleteObjectOutput undef
+      Paws::S3::DeleteObjectTagging undef
+      Paws::S3::DeleteObjectTaggingOutput undef
       Paws::S3::DeleteObjects undef
       Paws::S3::DeleteObjectsOutput undef
       Paws::S3::DeletedObject undef
@@ -7277,8 +8304,12 @@ DISTRIBUTIONS
       Paws::S3::GetBucketAccelerateConfigurationOutput undef
       Paws::S3::GetBucketAcl undef
       Paws::S3::GetBucketAclOutput undef
+      Paws::S3::GetBucketAnalyticsConfiguration undef
+      Paws::S3::GetBucketAnalyticsConfigurationOutput undef
       Paws::S3::GetBucketCors undef
       Paws::S3::GetBucketCorsOutput undef
+      Paws::S3::GetBucketInventoryConfiguration undef
+      Paws::S3::GetBucketInventoryConfigurationOutput undef
       Paws::S3::GetBucketLifecycle undef
       Paws::S3::GetBucketLifecycleConfiguration undef
       Paws::S3::GetBucketLifecycleConfigurationOutput undef
@@ -7287,6 +8318,8 @@ DISTRIBUTIONS
       Paws::S3::GetBucketLocationOutput undef
       Paws::S3::GetBucketLogging undef
       Paws::S3::GetBucketLoggingOutput undef
+      Paws::S3::GetBucketMetricsConfiguration undef
+      Paws::S3::GetBucketMetricsConfigurationOutput undef
       Paws::S3::GetBucketNotification undef
       Paws::S3::GetBucketNotificationConfiguration undef
       Paws::S3::GetBucketPolicy undef
@@ -7305,8 +8338,11 @@ DISTRIBUTIONS
       Paws::S3::GetObjectAcl undef
       Paws::S3::GetObjectAclOutput undef
       Paws::S3::GetObjectOutput undef
+      Paws::S3::GetObjectTagging undef
+      Paws::S3::GetObjectTaggingOutput undef
       Paws::S3::GetObjectTorrent undef
       Paws::S3::GetObjectTorrentOutput undef
+      Paws::S3::GlacierJobParameters undef
       Paws::S3::Grant undef
       Paws::S3::Grantee undef
       Paws::S3::HeadBucket undef
@@ -7314,10 +8350,23 @@ DISTRIBUTIONS
       Paws::S3::HeadObjectOutput undef
       Paws::S3::IndexDocument undef
       Paws::S3::Initiator undef
+      Paws::S3::InventoryConfiguration undef
+      Paws::S3::InventoryDestination undef
+      Paws::S3::InventoryFilter undef
+      Paws::S3::InventoryS3BucketDestination undef
+      Paws::S3::InventorySchedule undef
       Paws::S3::LambdaFunctionConfiguration undef
       Paws::S3::LifecycleConfiguration undef
       Paws::S3::LifecycleExpiration undef
       Paws::S3::LifecycleRule undef
+      Paws::S3::LifecycleRuleAndOperator undef
+      Paws::S3::LifecycleRuleFilter undef
+      Paws::S3::ListBucketAnalyticsConfigurations undef
+      Paws::S3::ListBucketAnalyticsConfigurationsOutput undef
+      Paws::S3::ListBucketInventoryConfigurations undef
+      Paws::S3::ListBucketInventoryConfigurationsOutput undef
+      Paws::S3::ListBucketMetricsConfigurations undef
+      Paws::S3::ListBucketMetricsConfigurationsOutput undef
       Paws::S3::ListBuckets undef
       Paws::S3::ListBucketsOutput undef
       Paws::S3::ListMultipartUploads undef
@@ -7332,6 +8381,9 @@ DISTRIBUTIONS
       Paws::S3::ListPartsOutput undef
       Paws::S3::LoggingEnabled undef
       Paws::S3::Metadata undef
+      Paws::S3::MetricsAndOperator undef
+      Paws::S3::MetricsConfiguration undef
+      Paws::S3::MetricsFilter undef
       Paws::S3::MultipartUpload undef
       Paws::S3::NoncurrentVersionExpiration undef
       Paws::S3::NoncurrentVersionTransition undef
@@ -7345,10 +8397,13 @@ DISTRIBUTIONS
       Paws::S3::Part undef
       Paws::S3::PutBucketAccelerateConfiguration undef
       Paws::S3::PutBucketAcl undef
+      Paws::S3::PutBucketAnalyticsConfiguration undef
       Paws::S3::PutBucketCors undef
+      Paws::S3::PutBucketInventoryConfiguration undef
       Paws::S3::PutBucketLifecycle undef
       Paws::S3::PutBucketLifecycleConfiguration undef
       Paws::S3::PutBucketLogging undef
+      Paws::S3::PutBucketMetricsConfiguration undef
       Paws::S3::PutBucketNotification undef
       Paws::S3::PutBucketNotificationConfiguration undef
       Paws::S3::PutBucketPolicy undef
@@ -7361,6 +8416,8 @@ DISTRIBUTIONS
       Paws::S3::PutObjectAcl undef
       Paws::S3::PutObjectAclOutput undef
       Paws::S3::PutObjectOutput undef
+      Paws::S3::PutObjectTagging undef
+      Paws::S3::PutObjectTaggingOutput undef
       Paws::S3::QueueConfiguration undef
       Paws::S3::QueueConfigurationDeprecated undef
       Paws::S3::Redirect undef
@@ -7374,6 +8431,8 @@ DISTRIBUTIONS
       Paws::S3::RoutingRule undef
       Paws::S3::Rule undef
       Paws::S3::S3KeyFilter undef
+      Paws::S3::StorageClassAnalysis undef
+      Paws::S3::StorageClassAnalysisDataExport undef
       Paws::S3::Tag undef
       Paws::S3::Tagging undef
       Paws::S3::TargetGrant undef
@@ -7408,7 +8467,7 @@ DISTRIBUTIONS
       Paws::SDB::Select undef
       Paws::SDB::SelectResult undef
       Paws::SDB::UpdateCondition undef
-      Paws::SDK::Config 0.28
+      Paws::SDK::Config 0.31
       Paws::SES undef
       Paws::SES::AddHeaderAction undef
       Paws::SES::Body undef
@@ -7416,13 +8475,24 @@ DISTRIBUTIONS
       Paws::SES::BouncedRecipientInfo undef
       Paws::SES::CloneReceiptRuleSet undef
       Paws::SES::CloneReceiptRuleSetResponse undef
+      Paws::SES::CloudWatchDestination undef
+      Paws::SES::CloudWatchDimensionConfiguration undef
+      Paws::SES::ConfigurationSet undef
       Paws::SES::Content undef
+      Paws::SES::CreateConfigurationSet undef
+      Paws::SES::CreateConfigurationSetEventDestination undef
+      Paws::SES::CreateConfigurationSetEventDestinationResponse undef
+      Paws::SES::CreateConfigurationSetResponse undef
       Paws::SES::CreateReceiptFilter undef
       Paws::SES::CreateReceiptFilterResponse undef
       Paws::SES::CreateReceiptRule undef
       Paws::SES::CreateReceiptRuleResponse undef
       Paws::SES::CreateReceiptRuleSet undef
       Paws::SES::CreateReceiptRuleSetResponse undef
+      Paws::SES::DeleteConfigurationSet undef
+      Paws::SES::DeleteConfigurationSetEventDestination undef
+      Paws::SES::DeleteConfigurationSetEventDestinationResponse undef
+      Paws::SES::DeleteConfigurationSetResponse undef
       Paws::SES::DeleteIdentity undef
       Paws::SES::DeleteIdentityPolicy undef
       Paws::SES::DeleteIdentityPolicyResponse undef
@@ -7436,12 +8506,15 @@ DISTRIBUTIONS
       Paws::SES::DeleteVerifiedEmailAddress undef
       Paws::SES::DescribeActiveReceiptRuleSet undef
       Paws::SES::DescribeActiveReceiptRuleSetResponse undef
+      Paws::SES::DescribeConfigurationSet undef
+      Paws::SES::DescribeConfigurationSetResponse undef
       Paws::SES::DescribeReceiptRule undef
       Paws::SES::DescribeReceiptRuleResponse undef
       Paws::SES::DescribeReceiptRuleSet undef
       Paws::SES::DescribeReceiptRuleSetResponse undef
       Paws::SES::Destination undef
       Paws::SES::DkimAttributes undef
+      Paws::SES::EventDestination undef
       Paws::SES::ExtensionField undef
       Paws::SES::GetIdentityDkimAttributes undef
       Paws::SES::GetIdentityDkimAttributesResponse undef
@@ -7461,7 +8534,10 @@ DISTRIBUTIONS
       Paws::SES::IdentityMailFromDomainAttributes undef
       Paws::SES::IdentityNotificationAttributes undef
       Paws::SES::IdentityVerificationAttributes undef
+      Paws::SES::KinesisFirehoseDestination undef
       Paws::SES::LambdaAction undef
+      Paws::SES::ListConfigurationSets undef
+      Paws::SES::ListConfigurationSetsResponse undef
       Paws::SES::ListIdentities undef
       Paws::SES::ListIdentitiesResponse undef
       Paws::SES::ListIdentityPolicies undef
@@ -7475,6 +8551,7 @@ DISTRIBUTIONS
       Paws::SES::MailFromDomainAttributes undef
       Paws::SES::Message undef
       Paws::SES::MessageDsn undef
+      Paws::SES::MessageTag undef
       Paws::SES::NotificationAttributes undef
       Paws::SES::PolicyMap undef
       Paws::SES::PutIdentityPolicy undef
@@ -7512,6 +8589,8 @@ DISTRIBUTIONS
       Paws::SES::SetReceiptRulePosition undef
       Paws::SES::SetReceiptRulePositionResponse undef
       Paws::SES::StopAction undef
+      Paws::SES::UpdateConfigurationSetEventDestination undef
+      Paws::SES::UpdateConfigurationSetEventDestinationResponse undef
       Paws::SES::UpdateReceiptRule undef
       Paws::SES::UpdateReceiptRuleResponse undef
       Paws::SES::VerificationAttributes undef
@@ -7523,6 +8602,35 @@ DISTRIBUTIONS
       Paws::SES::VerifyEmailIdentity undef
       Paws::SES::VerifyEmailIdentityResponse undef
       Paws::SES::WorkmailAction undef
+      Paws::SMS undef
+      Paws::SMS::Connector undef
+      Paws::SMS::CreateReplicationJob undef
+      Paws::SMS::CreateReplicationJobResponse undef
+      Paws::SMS::DeleteReplicationJob undef
+      Paws::SMS::DeleteReplicationJobResponse undef
+      Paws::SMS::DeleteServerCatalog undef
+      Paws::SMS::DeleteServerCatalogResponse undef
+      Paws::SMS::DisassociateConnector undef
+      Paws::SMS::DisassociateConnectorResponse undef
+      Paws::SMS::GetConnectors undef
+      Paws::SMS::GetConnectorsResponse undef
+      Paws::SMS::GetReplicationJobs undef
+      Paws::SMS::GetReplicationJobsResponse undef
+      Paws::SMS::GetReplicationRuns undef
+      Paws::SMS::GetReplicationRunsResponse undef
+      Paws::SMS::GetServers undef
+      Paws::SMS::GetServersResponse undef
+      Paws::SMS::ImportServerCatalog undef
+      Paws::SMS::ImportServerCatalogResponse undef
+      Paws::SMS::ReplicationJob undef
+      Paws::SMS::ReplicationRun undef
+      Paws::SMS::Server undef
+      Paws::SMS::StartOnDemandReplicationRun undef
+      Paws::SMS::StartOnDemandReplicationRunResponse undef
+      Paws::SMS::UpdateReplicationJob undef
+      Paws::SMS::UpdateReplicationJobResponse undef
+      Paws::SMS::VmServer undef
+      Paws::SMS::VmServerAddress undef
       Paws::SNS undef
       Paws::SNS::AddPermission undef
       Paws::SNS::CheckIfPhoneNumberIsOptedOut undef
@@ -7609,8 +8717,9 @@ DISTRIBUTIONS
       Paws::SQS::ListQueues undef
       Paws::SQS::ListQueuesResult undef
       Paws::SQS::Message undef
-      Paws::SQS::MessageAttributeMap undef
       Paws::SQS::MessageAttributeValue undef
+      Paws::SQS::MessageBodyAttributeMap undef
+      Paws::SQS::MessageSystemAttributeMap undef
       Paws::SQS::PurgeQueue undef
       Paws::SQS::QueueAttributeMap undef
       Paws::SQS::ReceiveMessage undef
@@ -7630,7 +8739,13 @@ DISTRIBUTIONS
       Paws::SSM::Association undef
       Paws::SSM::AssociationDescription undef
       Paws::SSM::AssociationFilter undef
+      Paws::SSM::AssociationOverview undef
       Paws::SSM::AssociationStatus undef
+      Paws::SSM::AssociationStatusAggregatedCount undef
+      Paws::SSM::AutomationExecution undef
+      Paws::SSM::AutomationExecutionFilter undef
+      Paws::SSM::AutomationExecutionMetadata undef
+      Paws::SSM::AutomationParameterMap undef
       Paws::SSM::CancelCommand undef
       Paws::SSM::CancelCommandResult undef
       Paws::SSM::Command undef
@@ -7646,57 +8761,215 @@ DISTRIBUTIONS
       Paws::SSM::CreateAssociationResult undef
       Paws::SSM::CreateDocument undef
       Paws::SSM::CreateDocumentResult undef
+      Paws::SSM::CreateMaintenanceWindow undef
+      Paws::SSM::CreateMaintenanceWindowResult undef
+      Paws::SSM::CreatePatchBaseline undef
+      Paws::SSM::CreatePatchBaselineResult undef
       Paws::SSM::DeleteActivation undef
       Paws::SSM::DeleteActivationResult undef
       Paws::SSM::DeleteAssociation undef
       Paws::SSM::DeleteAssociationResult undef
       Paws::SSM::DeleteDocument undef
       Paws::SSM::DeleteDocumentResult undef
+      Paws::SSM::DeleteMaintenanceWindow undef
+      Paws::SSM::DeleteMaintenanceWindowResult undef
+      Paws::SSM::DeleteParameter undef
+      Paws::SSM::DeleteParameterResult undef
+      Paws::SSM::DeletePatchBaseline undef
+      Paws::SSM::DeletePatchBaselineResult undef
       Paws::SSM::DeregisterManagedInstance undef
       Paws::SSM::DeregisterManagedInstanceResult undef
+      Paws::SSM::DeregisterPatchBaselineForPatchGroup undef
+      Paws::SSM::DeregisterPatchBaselineForPatchGroupResult undef
+      Paws::SSM::DeregisterTargetFromMaintenanceWindow undef
+      Paws::SSM::DeregisterTargetFromMaintenanceWindowResult undef
+      Paws::SSM::DeregisterTaskFromMaintenanceWindow undef
+      Paws::SSM::DeregisterTaskFromMaintenanceWindowResult undef
       Paws::SSM::DescribeActivations undef
       Paws::SSM::DescribeActivationsFilter undef
       Paws::SSM::DescribeActivationsResult undef
       Paws::SSM::DescribeAssociation undef
       Paws::SSM::DescribeAssociationResult undef
+      Paws::SSM::DescribeAutomationExecutions undef
+      Paws::SSM::DescribeAutomationExecutionsResult undef
+      Paws::SSM::DescribeAvailablePatches undef
+      Paws::SSM::DescribeAvailablePatchesResult undef
       Paws::SSM::DescribeDocument undef
       Paws::SSM::DescribeDocumentPermission undef
       Paws::SSM::DescribeDocumentPermissionResponse undef
       Paws::SSM::DescribeDocumentResult undef
+      Paws::SSM::DescribeEffectiveInstanceAssociations undef
+      Paws::SSM::DescribeEffectiveInstanceAssociationsResult undef
+      Paws::SSM::DescribeEffectivePatchesForPatchBaseline undef
+      Paws::SSM::DescribeEffectivePatchesForPatchBaselineResult undef
+      Paws::SSM::DescribeInstanceAssociationsStatus undef
+      Paws::SSM::DescribeInstanceAssociationsStatusResult undef
       Paws::SSM::DescribeInstanceInformation undef
       Paws::SSM::DescribeInstanceInformationResult undef
+      Paws::SSM::DescribeInstancePatchStates undef
+      Paws::SSM::DescribeInstancePatchStatesForPatchGroup undef
+      Paws::SSM::DescribeInstancePatchStatesForPatchGroupResult undef
+      Paws::SSM::DescribeInstancePatchStatesResult undef
+      Paws::SSM::DescribeInstancePatches undef
+      Paws::SSM::DescribeInstancePatchesResult undef
+      Paws::SSM::DescribeMaintenanceWindowExecutionTaskInvocations undef
+      Paws::SSM::DescribeMaintenanceWindowExecutionTaskInvocationsResult undef
+      Paws::SSM::DescribeMaintenanceWindowExecutionTasks undef
+      Paws::SSM::DescribeMaintenanceWindowExecutionTasksResult undef
+      Paws::SSM::DescribeMaintenanceWindowExecutions undef
+      Paws::SSM::DescribeMaintenanceWindowExecutionsResult undef
+      Paws::SSM::DescribeMaintenanceWindowTargets undef
+      Paws::SSM::DescribeMaintenanceWindowTargetsResult undef
+      Paws::SSM::DescribeMaintenanceWindowTasks undef
+      Paws::SSM::DescribeMaintenanceWindowTasksResult undef
+      Paws::SSM::DescribeMaintenanceWindows undef
+      Paws::SSM::DescribeMaintenanceWindowsResult undef
+      Paws::SSM::DescribeParameters undef
+      Paws::SSM::DescribeParametersResult undef
+      Paws::SSM::DescribePatchBaselines undef
+      Paws::SSM::DescribePatchBaselinesResult undef
+      Paws::SSM::DescribePatchGroupState undef
+      Paws::SSM::DescribePatchGroupStateResult undef
+      Paws::SSM::DescribePatchGroups undef
+      Paws::SSM::DescribePatchGroupsResult undef
+      Paws::SSM::DocumentDefaultVersionDescription undef
       Paws::SSM::DocumentDescription undef
       Paws::SSM::DocumentFilter undef
       Paws::SSM::DocumentIdentifier undef
       Paws::SSM::DocumentParameter undef
+      Paws::SSM::DocumentVersionInfo undef
+      Paws::SSM::EffectivePatch undef
       Paws::SSM::FailedCreateAssociation undef
+      Paws::SSM::GetAutomationExecution undef
+      Paws::SSM::GetAutomationExecutionResult undef
+      Paws::SSM::GetCommandInvocation undef
+      Paws::SSM::GetCommandInvocationResult undef
+      Paws::SSM::GetDefaultPatchBaseline undef
+      Paws::SSM::GetDefaultPatchBaselineResult undef
+      Paws::SSM::GetDeployablePatchSnapshotForInstance undef
+      Paws::SSM::GetDeployablePatchSnapshotForInstanceResult undef
       Paws::SSM::GetDocument undef
       Paws::SSM::GetDocumentResult undef
+      Paws::SSM::GetInventory undef
+      Paws::SSM::GetInventoryResult undef
+      Paws::SSM::GetInventorySchema undef
+      Paws::SSM::GetInventorySchemaResult undef
+      Paws::SSM::GetMaintenanceWindow undef
+      Paws::SSM::GetMaintenanceWindowExecution undef
+      Paws::SSM::GetMaintenanceWindowExecutionResult undef
+      Paws::SSM::GetMaintenanceWindowExecutionTask undef
+      Paws::SSM::GetMaintenanceWindowExecutionTaskResult undef
+      Paws::SSM::GetMaintenanceWindowResult undef
+      Paws::SSM::GetParameterHistory undef
+      Paws::SSM::GetParameterHistoryResult undef
+      Paws::SSM::GetParameters undef
+      Paws::SSM::GetParametersResult undef
+      Paws::SSM::GetPatchBaseline undef
+      Paws::SSM::GetPatchBaselineForPatchGroup undef
+      Paws::SSM::GetPatchBaselineForPatchGroupResult undef
+      Paws::SSM::GetPatchBaselineResult undef
+      Paws::SSM::InstanceAggregatedAssociationOverview undef
+      Paws::SSM::InstanceAssociation undef
+      Paws::SSM::InstanceAssociationOutputLocation undef
+      Paws::SSM::InstanceAssociationOutputUrl undef
+      Paws::SSM::InstanceAssociationStatusAggregatedCount undef
+      Paws::SSM::InstanceAssociationStatusInfo undef
       Paws::SSM::InstanceInformation undef
       Paws::SSM::InstanceInformationFilter undef
+      Paws::SSM::InstanceInformationStringFilter undef
+      Paws::SSM::InstancePatchState undef
+      Paws::SSM::InstancePatchStateFilter undef
+      Paws::SSM::InventoryFilter undef
+      Paws::SSM::InventoryItem undef
+      Paws::SSM::InventoryItemAttribute undef
+      Paws::SSM::InventoryItemEntry undef
+      Paws::SSM::InventoryItemSchema undef
+      Paws::SSM::InventoryResultEntity undef
+      Paws::SSM::InventoryResultItem undef
+      Paws::SSM::InventoryResultItemMap undef
       Paws::SSM::ListAssociations undef
       Paws::SSM::ListAssociationsResult undef
       Paws::SSM::ListCommandInvocations undef
       Paws::SSM::ListCommandInvocationsResult undef
       Paws::SSM::ListCommands undef
       Paws::SSM::ListCommandsResult undef
+      Paws::SSM::ListDocumentVersions undef
+      Paws::SSM::ListDocumentVersionsResult undef
       Paws::SSM::ListDocuments undef
       Paws::SSM::ListDocumentsResult undef
+      Paws::SSM::ListInventoryEntries undef
+      Paws::SSM::ListInventoryEntriesResult undef
       Paws::SSM::ListTagsForResource undef
       Paws::SSM::ListTagsForResourceResult undef
+      Paws::SSM::LoggingInfo undef
+      Paws::SSM::MaintenanceWindowExecution undef
+      Paws::SSM::MaintenanceWindowExecutionTaskIdentity undef
+      Paws::SSM::MaintenanceWindowExecutionTaskInvocationIdentity undef
+      Paws::SSM::MaintenanceWindowFilter undef
+      Paws::SSM::MaintenanceWindowIdentity undef
+      Paws::SSM::MaintenanceWindowTarget undef
+      Paws::SSM::MaintenanceWindowTask undef
+      Paws::SSM::MaintenanceWindowTaskParameterValueExpression undef
+      Paws::SSM::MaintenanceWindowTaskParameters undef
       Paws::SSM::ModifyDocumentPermission undef
       Paws::SSM::ModifyDocumentPermissionResponse undef
+      Paws::SSM::NormalStringMap undef
       Paws::SSM::NotificationConfig undef
+      Paws::SSM::Parameter undef
+      Paws::SSM::ParameterHistory undef
+      Paws::SSM::ParameterMetadata undef
       Paws::SSM::Parameters undef
+      Paws::SSM::ParametersFilter undef
+      Paws::SSM::Patch undef
+      Paws::SSM::PatchBaselineIdentity undef
+      Paws::SSM::PatchComplianceData undef
+      Paws::SSM::PatchFilter undef
+      Paws::SSM::PatchFilterGroup undef
+      Paws::SSM::PatchGroupPatchBaselineMapping undef
+      Paws::SSM::PatchOrchestratorFilter undef
+      Paws::SSM::PatchRule undef
+      Paws::SSM::PatchRuleGroup undef
+      Paws::SSM::PatchStatus undef
+      Paws::SSM::PutInventory undef
+      Paws::SSM::PutInventoryResult undef
+      Paws::SSM::PutParameter undef
+      Paws::SSM::PutParameterResult undef
+      Paws::SSM::RegisterDefaultPatchBaseline undef
+      Paws::SSM::RegisterDefaultPatchBaselineResult undef
+      Paws::SSM::RegisterPatchBaselineForPatchGroup undef
+      Paws::SSM::RegisterPatchBaselineForPatchGroupResult undef
+      Paws::SSM::RegisterTargetWithMaintenanceWindow undef
+      Paws::SSM::RegisterTargetWithMaintenanceWindowResult undef
+      Paws::SSM::RegisterTaskWithMaintenanceWindow undef
+      Paws::SSM::RegisterTaskWithMaintenanceWindowResult undef
       Paws::SSM::RemoveTagsFromResource undef
       Paws::SSM::RemoveTagsFromResourceResult undef
+      Paws::SSM::ResultAttribute undef
+      Paws::SSM::S3OutputLocation undef
+      Paws::SSM::S3OutputUrl undef
       Paws::SSM::SendCommand undef
       Paws::SSM::SendCommandResult undef
+      Paws::SSM::StartAutomationExecution undef
+      Paws::SSM::StartAutomationExecutionResult undef
+      Paws::SSM::StepExecution undef
+      Paws::SSM::StopAutomationExecution undef
+      Paws::SSM::StopAutomationExecutionResult undef
       Paws::SSM::Tag undef
+      Paws::SSM::Target undef
+      Paws::SSM::UpdateAssociation undef
+      Paws::SSM::UpdateAssociationResult undef
       Paws::SSM::UpdateAssociationStatus undef
       Paws::SSM::UpdateAssociationStatusResult undef
+      Paws::SSM::UpdateDocument undef
+      Paws::SSM::UpdateDocumentDefaultVersion undef
+      Paws::SSM::UpdateDocumentDefaultVersionResult undef
+      Paws::SSM::UpdateDocumentResult undef
+      Paws::SSM::UpdateMaintenanceWindow undef
+      Paws::SSM::UpdateMaintenanceWindowResult undef
       Paws::SSM::UpdateManagedInstanceRole undef
       Paws::SSM::UpdateManagedInstanceRoleResult undef
+      Paws::SSM::UpdatePatchBaseline undef
+      Paws::SSM::UpdatePatchBaselineResult undef
       Paws::STS undef
       Paws::STS::AssumeRole undef
       Paws::STS::AssumeRoleResponse undef
@@ -7716,47 +8989,148 @@ DISTRIBUTIONS
       Paws::STS::GetSessionToken undef
       Paws::STS::GetSessionTokenResponse undef
       Paws::ServiceCatalog undef
+      Paws::ServiceCatalog::AcceptPortfolioShare undef
+      Paws::ServiceCatalog::AcceptPortfolioShareOutput undef
+      Paws::ServiceCatalog::AccessLevelFilter undef
+      Paws::ServiceCatalog::AssociatePrincipalWithPortfolio undef
+      Paws::ServiceCatalog::AssociatePrincipalWithPortfolioOutput undef
+      Paws::ServiceCatalog::AssociateProductWithPortfolio undef
+      Paws::ServiceCatalog::AssociateProductWithPortfolioOutput undef
+      Paws::ServiceCatalog::ConstraintDetail undef
       Paws::ServiceCatalog::ConstraintSummary undef
+      Paws::ServiceCatalog::CreateConstraint undef
+      Paws::ServiceCatalog::CreateConstraintOutput undef
+      Paws::ServiceCatalog::CreatePortfolio undef
+      Paws::ServiceCatalog::CreatePortfolioOutput undef
+      Paws::ServiceCatalog::CreatePortfolioShare undef
+      Paws::ServiceCatalog::CreatePortfolioShareOutput undef
+      Paws::ServiceCatalog::CreateProduct undef
+      Paws::ServiceCatalog::CreateProductOutput undef
+      Paws::ServiceCatalog::CreateProvisioningArtifact undef
+      Paws::ServiceCatalog::CreateProvisioningArtifactOutput undef
+      Paws::ServiceCatalog::DeleteConstraint undef
+      Paws::ServiceCatalog::DeleteConstraintOutput undef
+      Paws::ServiceCatalog::DeletePortfolio undef
+      Paws::ServiceCatalog::DeletePortfolioOutput undef
+      Paws::ServiceCatalog::DeletePortfolioShare undef
+      Paws::ServiceCatalog::DeletePortfolioShareOutput undef
+      Paws::ServiceCatalog::DeleteProduct undef
+      Paws::ServiceCatalog::DeleteProductOutput undef
+      Paws::ServiceCatalog::DeleteProvisioningArtifact undef
+      Paws::ServiceCatalog::DeleteProvisioningArtifactOutput undef
+      Paws::ServiceCatalog::DescribeConstraint undef
+      Paws::ServiceCatalog::DescribeConstraintOutput undef
+      Paws::ServiceCatalog::DescribePortfolio undef
+      Paws::ServiceCatalog::DescribePortfolioOutput undef
       Paws::ServiceCatalog::DescribeProduct undef
+      Paws::ServiceCatalog::DescribeProductAsAdmin undef
+      Paws::ServiceCatalog::DescribeProductAsAdminOutput undef
       Paws::ServiceCatalog::DescribeProductOutput undef
       Paws::ServiceCatalog::DescribeProductView undef
       Paws::ServiceCatalog::DescribeProductViewOutput undef
+      Paws::ServiceCatalog::DescribeProvisioningArtifact undef
+      Paws::ServiceCatalog::DescribeProvisioningArtifactOutput undef
       Paws::ServiceCatalog::DescribeProvisioningParameters undef
       Paws::ServiceCatalog::DescribeProvisioningParametersOutput undef
       Paws::ServiceCatalog::DescribeRecord undef
       Paws::ServiceCatalog::DescribeRecordOutput undef
+      Paws::ServiceCatalog::DisassociatePrincipalFromPortfolio undef
+      Paws::ServiceCatalog::DisassociatePrincipalFromPortfolioOutput undef
+      Paws::ServiceCatalog::DisassociateProductFromPortfolio undef
+      Paws::ServiceCatalog::DisassociateProductFromPortfolioOutput undef
       Paws::ServiceCatalog::LaunchPathSummary undef
+      Paws::ServiceCatalog::ListAcceptedPortfolioShares undef
+      Paws::ServiceCatalog::ListAcceptedPortfolioSharesOutput undef
+      Paws::ServiceCatalog::ListConstraintsForPortfolio undef
+      Paws::ServiceCatalog::ListConstraintsForPortfolioOutput undef
       Paws::ServiceCatalog::ListLaunchPaths undef
       Paws::ServiceCatalog::ListLaunchPathsOutput undef
+      Paws::ServiceCatalog::ListPortfolioAccess undef
+      Paws::ServiceCatalog::ListPortfolioAccessOutput undef
+      Paws::ServiceCatalog::ListPortfolios undef
+      Paws::ServiceCatalog::ListPortfoliosForProduct undef
+      Paws::ServiceCatalog::ListPortfoliosForProductOutput undef
+      Paws::ServiceCatalog::ListPortfoliosOutput undef
+      Paws::ServiceCatalog::ListPrincipalsForPortfolio undef
+      Paws::ServiceCatalog::ListPrincipalsForPortfolioOutput undef
+      Paws::ServiceCatalog::ListProvisioningArtifacts undef
+      Paws::ServiceCatalog::ListProvisioningArtifactsOutput undef
       Paws::ServiceCatalog::ListRecordHistory undef
       Paws::ServiceCatalog::ListRecordHistoryOutput undef
       Paws::ServiceCatalog::ListRecordHistorySearchFilter undef
       Paws::ServiceCatalog::ParameterConstraints undef
+      Paws::ServiceCatalog::PortfolioDetail undef
+      Paws::ServiceCatalog::Principal undef
       Paws::ServiceCatalog::ProductViewAggregationValue undef
       Paws::ServiceCatalog::ProductViewAggregations undef
+      Paws::ServiceCatalog::ProductViewDetail undef
       Paws::ServiceCatalog::ProductViewFilters undef
       Paws::ServiceCatalog::ProductViewSummary undef
       Paws::ServiceCatalog::ProvisionProduct undef
       Paws::ServiceCatalog::ProvisionProductOutput undef
       Paws::ServiceCatalog::ProvisionedProductDetail undef
       Paws::ServiceCatalog::ProvisioningArtifact undef
+      Paws::ServiceCatalog::ProvisioningArtifactDetail undef
+      Paws::ServiceCatalog::ProvisioningArtifactInfo undef
       Paws::ServiceCatalog::ProvisioningArtifactParameter undef
+      Paws::ServiceCatalog::ProvisioningArtifactProperties undef
       Paws::ServiceCatalog::ProvisioningParameter undef
       Paws::ServiceCatalog::RecordDetail undef
       Paws::ServiceCatalog::RecordError undef
       Paws::ServiceCatalog::RecordOutput undef
       Paws::ServiceCatalog::RecordTag undef
+      Paws::ServiceCatalog::RejectPortfolioShare undef
+      Paws::ServiceCatalog::RejectPortfolioShareOutput undef
       Paws::ServiceCatalog::ScanProvisionedProducts undef
       Paws::ServiceCatalog::ScanProvisionedProductsOutput undef
       Paws::ServiceCatalog::SearchProducts undef
+      Paws::ServiceCatalog::SearchProductsAsAdmin undef
+      Paws::ServiceCatalog::SearchProductsAsAdminOutput undef
       Paws::ServiceCatalog::SearchProductsOutput undef
       Paws::ServiceCatalog::Tag undef
       Paws::ServiceCatalog::TerminateProvisionedProduct undef
       Paws::ServiceCatalog::TerminateProvisionedProductOutput undef
+      Paws::ServiceCatalog::UpdateConstraint undef
+      Paws::ServiceCatalog::UpdateConstraintOutput undef
+      Paws::ServiceCatalog::UpdatePortfolio undef
+      Paws::ServiceCatalog::UpdatePortfolioOutput undef
+      Paws::ServiceCatalog::UpdateProduct undef
+      Paws::ServiceCatalog::UpdateProductOutput undef
       Paws::ServiceCatalog::UpdateProvisionedProduct undef
       Paws::ServiceCatalog::UpdateProvisionedProductOutput undef
+      Paws::ServiceCatalog::UpdateProvisioningArtifact undef
+      Paws::ServiceCatalog::UpdateProvisioningArtifactOutput undef
       Paws::ServiceCatalog::UpdateProvisioningParameter undef
       Paws::ServiceCatalog::UsageInstruction undef
+      Paws::Shield undef
+      Paws::Shield::AttackDetail undef
+      Paws::Shield::AttackSummary undef
+      Paws::Shield::AttackVectorDescription undef
+      Paws::Shield::CreateProtection undef
+      Paws::Shield::CreateProtectionResponse undef
+      Paws::Shield::CreateSubscription undef
+      Paws::Shield::CreateSubscriptionResponse undef
+      Paws::Shield::DeleteProtection undef
+      Paws::Shield::DeleteProtectionResponse undef
+      Paws::Shield::DeleteSubscription undef
+      Paws::Shield::DeleteSubscriptionResponse undef
+      Paws::Shield::DescribeAttack undef
+      Paws::Shield::DescribeAttackResponse undef
+      Paws::Shield::DescribeProtection undef
+      Paws::Shield::DescribeProtectionResponse undef
+      Paws::Shield::DescribeSubscription undef
+      Paws::Shield::DescribeSubscriptionResponse undef
+      Paws::Shield::ListAttacks undef
+      Paws::Shield::ListAttacksResponse undef
+      Paws::Shield::ListProtections undef
+      Paws::Shield::ListProtectionsResponse undef
+      Paws::Shield::Mitigation undef
+      Paws::Shield::Protection undef
+      Paws::Shield::SubResourceSummary undef
+      Paws::Shield::Subscription undef
+      Paws::Shield::SummarizedAttackVector undef
+      Paws::Shield::SummarizedCounter undef
+      Paws::Shield::TimeRange undef
       Paws::Signin undef
       Paws::Signin::GetSigninToken undef
       Paws::Signin::GetSigninTokenResponse undef
@@ -7898,10 +9272,16 @@ DISTRIBUTIONS
       Paws::SimpleWorkflow::WorkflowTypeInfos undef
       Paws::Snowball undef
       Paws::Snowball::Address undef
+      Paws::Snowball::CancelCluster undef
+      Paws::Snowball::CancelClusterResult undef
       Paws::Snowball::CancelJob undef
       Paws::Snowball::CancelJobResult undef
+      Paws::Snowball::ClusterListEntry undef
+      Paws::Snowball::ClusterMetadata undef
       Paws::Snowball::CreateAddress undef
       Paws::Snowball::CreateAddressResult undef
+      Paws::Snowball::CreateCluster undef
+      Paws::Snowball::CreateClusterResult undef
       Paws::Snowball::CreateJob undef
       Paws::Snowball::CreateJobResult undef
       Paws::Snowball::DataTransfer undef
@@ -7909,8 +9289,11 @@ DISTRIBUTIONS
       Paws::Snowball::DescribeAddressResult undef
       Paws::Snowball::DescribeAddresses undef
       Paws::Snowball::DescribeAddressesResult undef
+      Paws::Snowball::DescribeCluster undef
+      Paws::Snowball::DescribeClusterResult undef
       Paws::Snowball::DescribeJob undef
       Paws::Snowball::DescribeJobResult undef
+      Paws::Snowball::EventTriggerDefinition undef
       Paws::Snowball::GetJobManifest undef
       Paws::Snowball::GetJobManifestResult undef
       Paws::Snowball::GetJobUnlockCode undef
@@ -7922,14 +9305,79 @@ DISTRIBUTIONS
       Paws::Snowball::JobMetadata undef
       Paws::Snowball::JobResource undef
       Paws::Snowball::KeyRange undef
+      Paws::Snowball::LambdaResource undef
+      Paws::Snowball::ListClusterJobs undef
+      Paws::Snowball::ListClusterJobsResult undef
+      Paws::Snowball::ListClusters undef
+      Paws::Snowball::ListClustersResult undef
       Paws::Snowball::ListJobs undef
       Paws::Snowball::ListJobsResult undef
       Paws::Snowball::Notification undef
       Paws::Snowball::S3Resource undef
       Paws::Snowball::Shipment undef
       Paws::Snowball::ShippingDetails undef
+      Paws::Snowball::UpdateCluster undef
+      Paws::Snowball::UpdateClusterResult undef
       Paws::Snowball::UpdateJob undef
       Paws::Snowball::UpdateJobResult undef
+      Paws::StepFunctions undef
+      Paws::StepFunctions::ActivityFailedEventDetails undef
+      Paws::StepFunctions::ActivityListItem undef
+      Paws::StepFunctions::ActivityScheduleFailedEventDetails undef
+      Paws::StepFunctions::ActivityScheduledEventDetails undef
+      Paws::StepFunctions::ActivityStartedEventDetails undef
+      Paws::StepFunctions::ActivitySucceededEventDetails undef
+      Paws::StepFunctions::ActivityTimedOutEventDetails undef
+      Paws::StepFunctions::CreateActivity undef
+      Paws::StepFunctions::CreateActivityOutput undef
+      Paws::StepFunctions::CreateStateMachine undef
+      Paws::StepFunctions::CreateStateMachineOutput undef
+      Paws::StepFunctions::DeleteActivity undef
+      Paws::StepFunctions::DeleteActivityOutput undef
+      Paws::StepFunctions::DeleteStateMachine undef
+      Paws::StepFunctions::DeleteStateMachineOutput undef
+      Paws::StepFunctions::DescribeActivity undef
+      Paws::StepFunctions::DescribeActivityOutput undef
+      Paws::StepFunctions::DescribeExecution undef
+      Paws::StepFunctions::DescribeExecutionOutput undef
+      Paws::StepFunctions::DescribeStateMachine undef
+      Paws::StepFunctions::DescribeStateMachineOutput undef
+      Paws::StepFunctions::ExecutionAbortedEventDetails undef
+      Paws::StepFunctions::ExecutionFailedEventDetails undef
+      Paws::StepFunctions::ExecutionListItem undef
+      Paws::StepFunctions::ExecutionStartedEventDetails undef
+      Paws::StepFunctions::ExecutionSucceededEventDetails undef
+      Paws::StepFunctions::ExecutionTimedOutEventDetails undef
+      Paws::StepFunctions::GetActivityTask undef
+      Paws::StepFunctions::GetActivityTaskOutput undef
+      Paws::StepFunctions::GetExecutionHistory undef
+      Paws::StepFunctions::GetExecutionHistoryOutput undef
+      Paws::StepFunctions::HistoryEvent undef
+      Paws::StepFunctions::LambdaFunctionFailedEventDetails undef
+      Paws::StepFunctions::LambdaFunctionScheduleFailedEventDetails undef
+      Paws::StepFunctions::LambdaFunctionScheduledEventDetails undef
+      Paws::StepFunctions::LambdaFunctionStartFailedEventDetails undef
+      Paws::StepFunctions::LambdaFunctionSucceededEventDetails undef
+      Paws::StepFunctions::LambdaFunctionTimedOutEventDetails undef
+      Paws::StepFunctions::ListActivities undef
+      Paws::StepFunctions::ListActivitiesOutput undef
+      Paws::StepFunctions::ListExecutions undef
+      Paws::StepFunctions::ListExecutionsOutput undef
+      Paws::StepFunctions::ListStateMachines undef
+      Paws::StepFunctions::ListStateMachinesOutput undef
+      Paws::StepFunctions::SendTaskFailure undef
+      Paws::StepFunctions::SendTaskFailureOutput undef
+      Paws::StepFunctions::SendTaskHeartbeat undef
+      Paws::StepFunctions::SendTaskHeartbeatOutput undef
+      Paws::StepFunctions::SendTaskSuccess undef
+      Paws::StepFunctions::SendTaskSuccessOutput undef
+      Paws::StepFunctions::StartExecution undef
+      Paws::StepFunctions::StartExecutionOutput undef
+      Paws::StepFunctions::StateEnteredEventDetails undef
+      Paws::StepFunctions::StateExitedEventDetails undef
+      Paws::StepFunctions::StateMachineListItem undef
+      Paws::StepFunctions::StopExecution undef
+      Paws::StepFunctions::StopExecutionOutput undef
       Paws::StorageGateway undef
       Paws::StorageGateway::ActivateGateway undef
       Paws::StorageGateway::ActivateGatewayOutput undef
@@ -7949,6 +9397,8 @@ DISTRIBUTIONS
       Paws::StorageGateway::ChapInfo undef
       Paws::StorageGateway::CreateCachediSCSIVolume undef
       Paws::StorageGateway::CreateCachediSCSIVolumeOutput undef
+      Paws::StorageGateway::CreateNFSFileShare undef
+      Paws::StorageGateway::CreateNFSFileShareOutput undef
       Paws::StorageGateway::CreateSnapshot undef
       Paws::StorageGateway::CreateSnapshotFromVolumeRecoveryPoint undef
       Paws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointOutput undef
@@ -7963,6 +9413,8 @@ DISTRIBUTIONS
       Paws::StorageGateway::DeleteBandwidthRateLimitOutput undef
       Paws::StorageGateway::DeleteChapCredentials undef
       Paws::StorageGateway::DeleteChapCredentialsOutput undef
+      Paws::StorageGateway::DeleteFileShare undef
+      Paws::StorageGateway::DeleteFileShareOutput undef
       Paws::StorageGateway::DeleteGateway undef
       Paws::StorageGateway::DeleteGatewayOutput undef
       Paws::StorageGateway::DeleteSnapshotSchedule undef
@@ -7985,6 +9437,8 @@ DISTRIBUTIONS
       Paws::StorageGateway::DescribeGatewayInformationOutput undef
       Paws::StorageGateway::DescribeMaintenanceStartTime undef
       Paws::StorageGateway::DescribeMaintenanceStartTimeOutput undef
+      Paws::StorageGateway::DescribeNFSFileShares undef
+      Paws::StorageGateway::DescribeNFSFileSharesOutput undef
       Paws::StorageGateway::DescribeSnapshotSchedule undef
       Paws::StorageGateway::DescribeSnapshotScheduleOutput undef
       Paws::StorageGateway::DescribeStorediSCSIVolumes undef
@@ -8006,7 +9460,10 @@ DISTRIBUTIONS
       Paws::StorageGateway::DisableGatewayOutput undef
       Paws::StorageGateway::Disk undef
       Paws::StorageGateway::ErrorDetails undef
+      Paws::StorageGateway::FileShareInfo undef
       Paws::StorageGateway::GatewayInfo undef
+      Paws::StorageGateway::ListFileShares undef
+      Paws::StorageGateway::ListFileSharesOutput undef
       Paws::StorageGateway::ListGateways undef
       Paws::StorageGateway::ListGatewaysOutput undef
       Paws::StorageGateway::ListLocalDisks undef
@@ -8021,6 +9478,8 @@ DISTRIBUTIONS
       Paws::StorageGateway::ListVolumeRecoveryPointsOutput undef
       Paws::StorageGateway::ListVolumes undef
       Paws::StorageGateway::ListVolumesOutput undef
+      Paws::StorageGateway::NFSFileShareDefaults undef
+      Paws::StorageGateway::NFSFileShareInfo undef
       Paws::StorageGateway::NetworkInterface undef
       Paws::StorageGateway::RemoveTagsFromResource undef
       Paws::StorageGateway::RemoveTagsFromResourceOutput undef
@@ -8053,6 +9512,8 @@ DISTRIBUTIONS
       Paws::StorageGateway::UpdateGatewaySoftwareNowOutput undef
       Paws::StorageGateway::UpdateMaintenanceStartTime undef
       Paws::StorageGateway::UpdateMaintenanceStartTimeOutput undef
+      Paws::StorageGateway::UpdateNFSFileShare undef
+      Paws::StorageGateway::UpdateNFSFileShareOutput undef
       Paws::StorageGateway::UpdateSnapshotSchedule undef
       Paws::StorageGateway::UpdateSnapshotScheduleOutput undef
       Paws::StorageGateway::UpdateVTLDeviceType undef
@@ -8217,6 +9678,125 @@ DISTRIBUTIONS
       Paws::WAF::XssMatchSetSummary undef
       Paws::WAF::XssMatchSetUpdate undef
       Paws::WAF::XssMatchTuple undef
+      Paws::WAFRegional undef
+      Paws::WAFRegional::ActivatedRule undef
+      Paws::WAFRegional::AssociateWebACL undef
+      Paws::WAFRegional::AssociateWebACLResponse undef
+      Paws::WAFRegional::ByteMatchSet undef
+      Paws::WAFRegional::ByteMatchSetSummary undef
+      Paws::WAFRegional::ByteMatchSetUpdate undef
+      Paws::WAFRegional::ByteMatchTuple undef
+      Paws::WAFRegional::CreateByteMatchSet undef
+      Paws::WAFRegional::CreateByteMatchSetResponse undef
+      Paws::WAFRegional::CreateIPSet undef
+      Paws::WAFRegional::CreateIPSetResponse undef
+      Paws::WAFRegional::CreateRule undef
+      Paws::WAFRegional::CreateRuleResponse undef
+      Paws::WAFRegional::CreateSizeConstraintSet undef
+      Paws::WAFRegional::CreateSizeConstraintSetResponse undef
+      Paws::WAFRegional::CreateSqlInjectionMatchSet undef
+      Paws::WAFRegional::CreateSqlInjectionMatchSetResponse undef
+      Paws::WAFRegional::CreateWebACL undef
+      Paws::WAFRegional::CreateWebACLResponse undef
+      Paws::WAFRegional::CreateXssMatchSet undef
+      Paws::WAFRegional::CreateXssMatchSetResponse undef
+      Paws::WAFRegional::DeleteByteMatchSet undef
+      Paws::WAFRegional::DeleteByteMatchSetResponse undef
+      Paws::WAFRegional::DeleteIPSet undef
+      Paws::WAFRegional::DeleteIPSetResponse undef
+      Paws::WAFRegional::DeleteRule undef
+      Paws::WAFRegional::DeleteRuleResponse undef
+      Paws::WAFRegional::DeleteSizeConstraintSet undef
+      Paws::WAFRegional::DeleteSizeConstraintSetResponse undef
+      Paws::WAFRegional::DeleteSqlInjectionMatchSet undef
+      Paws::WAFRegional::DeleteSqlInjectionMatchSetResponse undef
+      Paws::WAFRegional::DeleteWebACL undef
+      Paws::WAFRegional::DeleteWebACLResponse undef
+      Paws::WAFRegional::DeleteXssMatchSet undef
+      Paws::WAFRegional::DeleteXssMatchSetResponse undef
+      Paws::WAFRegional::DisassociateWebACL undef
+      Paws::WAFRegional::DisassociateWebACLResponse undef
+      Paws::WAFRegional::FieldToMatch undef
+      Paws::WAFRegional::GetByteMatchSet undef
+      Paws::WAFRegional::GetByteMatchSetResponse undef
+      Paws::WAFRegional::GetChangeToken undef
+      Paws::WAFRegional::GetChangeTokenResponse undef
+      Paws::WAFRegional::GetChangeTokenStatus undef
+      Paws::WAFRegional::GetChangeTokenStatusResponse undef
+      Paws::WAFRegional::GetIPSet undef
+      Paws::WAFRegional::GetIPSetResponse undef
+      Paws::WAFRegional::GetRule undef
+      Paws::WAFRegional::GetRuleResponse undef
+      Paws::WAFRegional::GetSampledRequests undef
+      Paws::WAFRegional::GetSampledRequestsResponse undef
+      Paws::WAFRegional::GetSizeConstraintSet undef
+      Paws::WAFRegional::GetSizeConstraintSetResponse undef
+      Paws::WAFRegional::GetSqlInjectionMatchSet undef
+      Paws::WAFRegional::GetSqlInjectionMatchSetResponse undef
+      Paws::WAFRegional::GetWebACL undef
+      Paws::WAFRegional::GetWebACLForResource undef
+      Paws::WAFRegional::GetWebACLForResourceResponse undef
+      Paws::WAFRegional::GetWebACLResponse undef
+      Paws::WAFRegional::GetXssMatchSet undef
+      Paws::WAFRegional::GetXssMatchSetResponse undef
+      Paws::WAFRegional::HTTPHeader undef
+      Paws::WAFRegional::HTTPRequest undef
+      Paws::WAFRegional::IPSet undef
+      Paws::WAFRegional::IPSetDescriptor undef
+      Paws::WAFRegional::IPSetSummary undef
+      Paws::WAFRegional::IPSetUpdate undef
+      Paws::WAFRegional::ListByteMatchSets undef
+      Paws::WAFRegional::ListByteMatchSetsResponse undef
+      Paws::WAFRegional::ListIPSets undef
+      Paws::WAFRegional::ListIPSetsResponse undef
+      Paws::WAFRegional::ListResourcesForWebACL undef
+      Paws::WAFRegional::ListResourcesForWebACLResponse undef
+      Paws::WAFRegional::ListRules undef
+      Paws::WAFRegional::ListRulesResponse undef
+      Paws::WAFRegional::ListSizeConstraintSets undef
+      Paws::WAFRegional::ListSizeConstraintSetsResponse undef
+      Paws::WAFRegional::ListSqlInjectionMatchSets undef
+      Paws::WAFRegional::ListSqlInjectionMatchSetsResponse undef
+      Paws::WAFRegional::ListWebACLs undef
+      Paws::WAFRegional::ListWebACLsResponse undef
+      Paws::WAFRegional::ListXssMatchSets undef
+      Paws::WAFRegional::ListXssMatchSetsResponse undef
+      Paws::WAFRegional::Predicate undef
+      Paws::WAFRegional::Rule undef
+      Paws::WAFRegional::RuleSummary undef
+      Paws::WAFRegional::RuleUpdate undef
+      Paws::WAFRegional::SampledHTTPRequest undef
+      Paws::WAFRegional::SizeConstraint undef
+      Paws::WAFRegional::SizeConstraintSet undef
+      Paws::WAFRegional::SizeConstraintSetSummary undef
+      Paws::WAFRegional::SizeConstraintSetUpdate undef
+      Paws::WAFRegional::SqlInjectionMatchSet undef
+      Paws::WAFRegional::SqlInjectionMatchSetSummary undef
+      Paws::WAFRegional::SqlInjectionMatchSetUpdate undef
+      Paws::WAFRegional::SqlInjectionMatchTuple undef
+      Paws::WAFRegional::TimeWindow undef
+      Paws::WAFRegional::UpdateByteMatchSet undef
+      Paws::WAFRegional::UpdateByteMatchSetResponse undef
+      Paws::WAFRegional::UpdateIPSet undef
+      Paws::WAFRegional::UpdateIPSetResponse undef
+      Paws::WAFRegional::UpdateRule undef
+      Paws::WAFRegional::UpdateRuleResponse undef
+      Paws::WAFRegional::UpdateSizeConstraintSet undef
+      Paws::WAFRegional::UpdateSizeConstraintSetResponse undef
+      Paws::WAFRegional::UpdateSqlInjectionMatchSet undef
+      Paws::WAFRegional::UpdateSqlInjectionMatchSetResponse undef
+      Paws::WAFRegional::UpdateWebACL undef
+      Paws::WAFRegional::UpdateWebACLResponse undef
+      Paws::WAFRegional::UpdateXssMatchSet undef
+      Paws::WAFRegional::UpdateXssMatchSetResponse undef
+      Paws::WAFRegional::WafAction undef
+      Paws::WAFRegional::WebACL undef
+      Paws::WAFRegional::WebACLSummary undef
+      Paws::WAFRegional::WebACLUpdate undef
+      Paws::WAFRegional::XssMatchSet undef
+      Paws::WAFRegional::XssMatchSetSummary undef
+      Paws::WAFRegional::XssMatchSetUpdate undef
+      Paws::WAFRegional::XssMatchTuple undef
       Paws::WorkSpaces undef
       Paws::WorkSpaces::ComputeType undef
       Paws::WorkSpaces::CreateTags undef
@@ -8263,14 +9843,46 @@ DISTRIBUTIONS
       Paws::WorkSpaces::WorkspaceDirectory undef
       Paws::WorkSpaces::WorkspaceProperties undef
       Paws::WorkSpaces::WorkspaceRequest undef
+      Paws::XRay undef
+      Paws::XRay::Alias undef
+      Paws::XRay::AnnotationValue undef
+      Paws::XRay::Annotations undef
+      Paws::XRay::BackendConnectionErrors undef
+      Paws::XRay::BatchGetTraces undef
+      Paws::XRay::BatchGetTracesResult undef
+      Paws::XRay::Edge undef
+      Paws::XRay::EdgeStatistics undef
+      Paws::XRay::ErrorStatistics undef
+      Paws::XRay::FaultStatistics undef
+      Paws::XRay::GetServiceGraph undef
+      Paws::XRay::GetServiceGraphResult undef
+      Paws::XRay::GetTraceGraph undef
+      Paws::XRay::GetTraceGraphResult undef
+      Paws::XRay::GetTraceSummaries undef
+      Paws::XRay::GetTraceSummariesResult undef
+      Paws::XRay::HistogramEntry undef
+      Paws::XRay::Http undef
+      Paws::XRay::PutTelemetryRecords undef
+      Paws::XRay::PutTelemetryRecordsResult undef
+      Paws::XRay::PutTraceSegments undef
+      Paws::XRay::PutTraceSegmentsResult undef
+      Paws::XRay::Segment undef
+      Paws::XRay::Service undef
+      Paws::XRay::ServiceId undef
+      Paws::XRay::ServiceStatistics undef
+      Paws::XRay::TelemetryRecord undef
+      Paws::XRay::Trace undef
+      Paws::XRay::TraceSummary undef
+      Paws::XRay::TraceUser undef
+      Paws::XRay::UnprocessedTraceSegment undef
+      Paws::XRay::ValueWithServiceIds undef
     requirements:
       ARGV::Struct 0
       Config::INI 0
-      Crypt::Digest::SHA256 0
       Data::Compare 0
       DateTime 0
       DateTime::Format::ISO8601 0
-      Digest::HMAC 0
+      Digest::SHA 0
       ExtUtils::MakeMaker 0
       File::HomeDir 0
       Getopt::Long 0
@@ -8284,14 +9896,15 @@ DISTRIBUTIONS
       MooseX::Getopt 0
       Net::Amazon::Signature::V3 0
       Net::Amazon::Signature::V4 0
+      Path::Class 0
       String::CRC32 0
-      String::Util 0
       Throwable::Error 0
       URI 0
       URI::Template 0
       URL::Encode 0
       URL::Encode::XS 0
       XML::Simple 0
+      perl 5.010001
   PerlIO-utf8_strict-0.006
     pathname: L/LE/LEONT/PerlIO-utf8_strict-0.006.tar.gz
     provides:
@@ -8856,10 +10469,12 @@ DISTRIBUTIONS
       Fcntl 0
       URI 1.10
       perl 5.008001
-  Web-AssetLib-0.0.1006
-    pathname: D/DU/DUMMY/Web-AssetLib-0.0.1006.tar.gz
+  Web-AssetLib-0.07
+    pathname: D/DU/DUMMY/Web-AssetLib-0.07.tar.gz
     provides:
-      Web::AssetLib v0.0.1006
+      Test::Web::AssetLib::TestLibrary undef
+      Test::Web::AssetLib::TestRole undef
+      Web::AssetLib 0.07
       Web::AssetLib::Asset undef
       Web::AssetLib::Bundle undef
       Web::AssetLib::InputEngine undef
@@ -8868,6 +10483,7 @@ DISTRIBUTIONS
       Web::AssetLib::InputEngine::RemoteFile undef
       Web::AssetLib::Library undef
       Web::AssetLib::MinifierEngine undef
+      Web::AssetLib::MinifierEngine::Pretty undef
       Web::AssetLib::MinifierEngine::Standard undef
       Web::AssetLib::Output undef
       Web::AssetLib::Output::Content undef
@@ -8880,6 +10496,9 @@ DISTRIBUTIONS
     requirements:
       Data::Dump 0
       HTML::Element 0
+      HTTP::Request 0
+      JavaScript::Beautifier 0
+      LWP::UserAgent 0
       Log::Log4perl 0
       Method::Signatures 0
       Module::Build::Tiny 0.035
