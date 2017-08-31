@@ -158,10 +158,6 @@ method export (:$assets!, :$minifier?) {
                     $self->log->debug("found asset in cache: $fullpath");
                 }
                 else {
-                    $self->log->debug(
-                        sprintf( 'emitted: %s/%s',
-                            $self->link_url, $fullpath )
-                    );
                     if ($minifier) {
                         $contents = $minifier->minify(
                             contents => $contents,
@@ -186,11 +182,6 @@ method export (:$assets!, :$minifier?) {
                             contents => $asset->source_map_contents,
                             type     => 'map'
                         );
-
-                        $self->log->debug(
-                            sprintf( 'emitted: %s/%s',
-                                $self->link_url, $srcmap_path )
-                        );
                     }
 
                     $cacheInvalid = 1;
@@ -212,22 +203,31 @@ method export (:$assets!, :$minifier?) {
 }
 
 method _s3Put (:$filename, :$contents, :$type) {
-    my %putargs = (
-        Bucket      => $self->bucket_name,
-        Key         => $filename,
-        Body        => $contents,
-        ContentType => Web::AssetLib::Util::normalizeMimeType($type)
-    );
+    if ($contents) {
+        my %putargs = (
+            Bucket      => $self->bucket_name,
+            Key         => $filename,
+            Body        => $contents,
+            ContentType => Web::AssetLib::Util::normalizeMimeType($type)
+        );
 
-    if ( $self->object_expiration_cb ) {
-        $putargs{Expires}
-            = DateTime::Format::HTTP->format_datetime(
-            $self->object_expiration_cb->( \%putargs ) );
+        if ( $self->object_expiration_cb ) {
+            $putargs{Expires}
+                = DateTime::Format::HTTP->format_datetime(
+                $self->object_expiration_cb->( \%putargs ) );
+        }
+
+        my $put = $self->s3->PutObject(%putargs);
+
+        $self->log->debug(
+            sprintf( 'emitted: %s/%s', $self->link_url, $filename ) );
+
+        return $put;
     }
-
-    my $put = $self->s3->PutObject(%putargs);
-
-    return $put;
+    else {
+        $self->log->debug(
+            "'$filename' asset was not uploaded due to empty content body");
+    }
 }
 
 method _build__s3_obj_cache (@_) {
